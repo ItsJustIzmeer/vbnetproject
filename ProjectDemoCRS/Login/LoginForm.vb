@@ -7,6 +7,12 @@ Public Class LoginForm
         If (valid) Then
             CrsMainForm.Show()
             Me.Hide()
+        Else
+            If user.userName = "" Or user.password = "" Then
+                MessageBox.Show("Username or Password is empty")
+            Else
+                MessageBox.Show("Incorrect")
+            End If
         End If
     End Sub
 

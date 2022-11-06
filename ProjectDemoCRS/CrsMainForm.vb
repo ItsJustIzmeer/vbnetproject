@@ -1,6 +1,7 @@
 ﻿Public Class CrsMainForm
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
-        End
+        LoginForm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub CrsMainForm_Closed(sender As Object, e As EventArgs) Handles Me.Closed

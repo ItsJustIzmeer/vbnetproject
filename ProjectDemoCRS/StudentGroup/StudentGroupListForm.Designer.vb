@@ -32,10 +32,10 @@ Partial Class StudentGroupListForm
         'StudentGroupDataGridView
         '
         Me.StudentGroupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentGroupDataGridView.Location = New System.Drawing.Point(28, 134)
+        Me.StudentGroupDataGridView.Location = New System.Drawing.Point(12, 134)
         Me.StudentGroupDataGridView.MultiSelect = False
         Me.StudentGroupDataGridView.Name = "StudentGroupDataGridView"
-        Me.StudentGroupDataGridView.Size = New System.Drawing.Size(1496, 338)
+        Me.StudentGroupDataGridView.Size = New System.Drawing.Size(980, 338)
         Me.StudentGroupDataGridView.TabIndex = 0
         '
         'updateStudentGroupButton
@@ -75,7 +75,7 @@ Partial Class StudentGroupListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 560)
+        Me.ClientSize = New System.Drawing.Size(1013, 560)
         Me.Controls.Add(Me.updateStudentGroupButton)
         Me.Controls.Add(Me.AddStudentGroupButton)
         Me.Controls.Add(Me.DeleteStudentGroupButton)
