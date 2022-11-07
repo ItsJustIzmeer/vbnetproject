@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class StudentForm
+Partial Class TeacherForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -33,7 +33,7 @@ Partial Class StudentForm
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.AddUpdateButton = New System.Windows.Forms.Button()
         Me.icNumberTextBox = New System.Windows.Forms.TextBox()
-        Me.matricTextBox = New System.Windows.Forms.TextBox()
+        Me.idTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -52,7 +52,7 @@ Partial Class StudentForm
         Me.GroupBox1.Controls.Add(Me.CancelButton)
         Me.GroupBox1.Controls.Add(Me.AddUpdateButton)
         Me.GroupBox1.Controls.Add(Me.icNumberTextBox)
-        Me.GroupBox1.Controls.Add(Me.matricTextBox)
+        Me.GroupBox1.Controls.Add(Me.idTextBox)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -62,9 +62,9 @@ Partial Class StudentForm
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
         Me.GroupBox1.Size = New System.Drawing.Size(682, 504)
-        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Student Information"
+        Me.GroupBox1.Text = "Teacher Information"
         '
         'dobDateTimePicker1
         '
@@ -148,12 +148,12 @@ Partial Class StudentForm
         Me.icNumberTextBox.Size = New System.Drawing.Size(262, 31)
         Me.icNumberTextBox.TabIndex = 4
         '
-        'matricTextBox
+        'idTextBox
         '
-        Me.matricTextBox.Location = New System.Drawing.Point(206, 57)
-        Me.matricTextBox.Name = "matricTextBox"
-        Me.matricTextBox.Size = New System.Drawing.Size(259, 31)
-        Me.matricTextBox.TabIndex = 3
+        Me.idTextBox.Location = New System.Drawing.Point(206, 57)
+        Me.idTextBox.Name = "idTextBox"
+        Me.idTextBox.Size = New System.Drawing.Size(259, 31)
+        Me.idTextBox.TabIndex = 3
         '
         'Label3
         '
@@ -178,18 +178,18 @@ Partial Class StudentForm
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(9, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(152, 25)
+        Me.Label1.Size = New System.Drawing.Size(110, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Matric Number"
+        Me.Label1.Text = "Id Number"
         '
-        'StudentForm
+        'TeacherForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(712, 532)
+        Me.ClientSize = New System.Drawing.Size(712, 534)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "StudentForm"
-        Me.Text = "StudentForm"
+        Me.Name = "TeacherForm"
+        Me.Text = "TeacherForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -197,18 +197,18 @@ Partial Class StudentForm
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CancelButton As Button
-    Friend WithEvents AddUpdateButton As Button
-    Friend WithEvents icNumberTextBox As TextBox
-    Friend WithEvents matricTextBox As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents dobDateTimePicker1 As DateTimePicker
     Friend WithEvents nameTextBox As TextBox
-    Friend WithEvents classComboBox As ComboBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents PhoneNumberTextBox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents CancelButton As Button
+    Friend WithEvents AddUpdateButton As Button
+    Friend WithEvents icNumberTextBox As TextBox
+    Friend WithEvents idTextBox As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents classComboBox As ComboBox
+    Friend WithEvents Label7 As Label
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class StudentListForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class StudentListForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.updateStudentButton = New System.Windows.Forms.Button()
         Me.AddStudentButton = New System.Windows.Forms.Button()
@@ -41,7 +41,7 @@ Partial Class StudentListForm
         'updateStudentButton
         '
         Me.updateStudentButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updateStudentButton.Location = New System.Drawing.Point(601, 482)
+        Me.updateStudentButton.Location = New System.Drawing.Point(551, 467)
         Me.updateStudentButton.Margin = New System.Windows.Forms.Padding(6)
         Me.updateStudentButton.Name = "updateStudentButton"
         Me.updateStudentButton.Size = New System.Drawing.Size(209, 60)
@@ -52,7 +52,7 @@ Partial Class StudentListForm
         'AddStudentButton
         '
         Me.AddStudentButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddStudentButton.Location = New System.Drawing.Point(380, 482)
+        Me.AddStudentButton.Location = New System.Drawing.Point(330, 467)
         Me.AddStudentButton.Margin = New System.Windows.Forms.Padding(6)
         Me.AddStudentButton.Name = "AddStudentButton"
         Me.AddStudentButton.Size = New System.Drawing.Size(209, 60)
@@ -63,7 +63,7 @@ Partial Class StudentListForm
         'DeleteStudentButton
         '
         Me.DeleteStudentButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteStudentButton.Location = New System.Drawing.Point(822, 482)
+        Me.DeleteStudentButton.Location = New System.Drawing.Point(772, 467)
         Me.DeleteStudentButton.Margin = New System.Windows.Forms.Padding(6)
         Me.DeleteStudentButton.Name = "DeleteStudentButton"
         Me.DeleteStudentButton.Size = New System.Drawing.Size(228, 60)
@@ -74,10 +74,10 @@ Partial Class StudentListForm
         'StudentDataGridView
         '
         Me.StudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentDataGridView.Location = New System.Drawing.Point(39, 162)
+        Me.StudentDataGridView.Location = New System.Drawing.Point(12, 151)
         Me.StudentDataGridView.MultiSelect = False
         Me.StudentDataGridView.Name = "StudentDataGridView"
-        Me.StudentDataGridView.Size = New System.Drawing.Size(1242, 295)
+        Me.StudentDataGridView.Size = New System.Drawing.Size(1178, 295)
         Me.StudentDataGridView.TabIndex = 9
         '
         'Search
@@ -88,7 +88,7 @@ Partial Class StudentListForm
         Me.Search.Controls.Add(Me.Label1)
         Me.Search.Controls.Add(Me.searchTextBox)
         Me.Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Search.Location = New System.Drawing.Point(103, 13)
+        Me.Search.Location = New System.Drawing.Point(12, 12)
         Me.Search.Name = "Search"
         Me.Search.Size = New System.Drawing.Size(1178, 82)
         Me.Search.TabIndex = 13
@@ -141,7 +141,7 @@ Partial Class StudentListForm
         'RegistrationButton
         '
         Me.RegistrationButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RegistrationButton.Location = New System.Drawing.Point(62, 482)
+        Me.RegistrationButton.Location = New System.Drawing.Point(12, 467)
         Me.RegistrationButton.Margin = New System.Windows.Forms.Padding(6)
         Me.RegistrationButton.Name = "RegistrationButton"
         Me.RegistrationButton.Size = New System.Drawing.Size(306, 60)
@@ -153,7 +153,7 @@ Partial Class StudentListForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(35, 135)
+        Me.Label2.Location = New System.Drawing.Point(8, 125)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(458, 24)
         Me.Label2.TabIndex = 16
@@ -163,7 +163,7 @@ Partial Class StudentListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 676)
+        Me.ClientSize = New System.Drawing.Size(1212, 554)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.RegistrationButton)
         Me.Controls.Add(Me.Search)

@@ -9,9 +9,9 @@ Public Class LoginForm
             Me.Hide()
         Else
             If user.userName = "" Or user.password = "" Then
-                MessageBox.Show("Username or Password is empty")
+                MessageBox.Show("Username or Password is Empty")
             Else
-                MessageBox.Show("Incorrect")
+                MessageBox.Show("Username or Password is Incorrect")
             End If
         End If
     End Sub

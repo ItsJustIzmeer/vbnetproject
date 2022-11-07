@@ -72,7 +72,7 @@ Public Class StudentGroupClass
             'sql = "select distinct(groupId) FROM studentGroupTbl order by groupId"
             sql = "select groupId FROM studentGroupTbl order by groupId"
 
-            MessageBox.Show(sql)
+            'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             dr = cmd.ExecuteReader()
             studentClassList = String.Empty

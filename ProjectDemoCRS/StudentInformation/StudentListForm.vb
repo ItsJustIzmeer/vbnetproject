@@ -20,7 +20,7 @@
             'opens the connection
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                MsgBox("MS Database Connected!")
+                'MsgBox("MS Database Connected!")
                 displayAllStudent()
             End If
         Catch ex As Exception
@@ -126,5 +126,16 @@
 
         RegistrationForm.showStudentInformation(mMatricString)
         RegistrationForm.ShowDialog()
+    End Sub
+
+    Private Sub ICButton_Click(sender As Object, e As EventArgs) Handles ICButton.Click
+        clearStudentGrid()
+
+        sqlString = "Select * from student where icNumber like '%" & searchTextBox.Text & "%'"
+        Debug.WriteLine(sqlString)
+        dataAdapter = New OleDb.OleDbDataAdapter(sqlString, conn)
+        dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
+        Me.StudentDataGridView.DataMember = "ihsanTuitionCenterDb"
+        StudentDataGridView.DataSource = ds
     End Sub
 End Class

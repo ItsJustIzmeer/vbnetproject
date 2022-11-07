@@ -6,7 +6,7 @@
 
 
     Friend Sub prepareToUpdateStudent(studentMatric As String)
-        MessageBox.Show("to update studnet with matric" & studentMatric)
+        'MessageBox.Show("to update student with matric" & studentMatric)
         With Me
             .AddUpdateButton.Text = "Update"
         End With
@@ -20,7 +20,7 @@
                 .icNumberTextBox.Text = OldStudentRec.ic
                 .matricTextBox.Text = OldStudentRec.matric
                 .nameTextBox.Text = OldStudentRec.name
-                MessageBox.Show(OldStudentRec.dob.Date.ToString)
+                'MessageBox.Show(OldStudentRec.dob.Date.ToString)
                 'displayLevel(OldStudentGroupRec.groupLevel) 'to check suitable radio button
                 '.dobDateTimePicker1.CustomFormat = "dd-MM-yyyy"
                 .dobDateTimePicker1.Value = OldStudentRec.dob.Date
@@ -72,6 +72,7 @@
             .matric = matricTextBox.Text
             .name = nameTextBox.Text
             .dob = dobDateTimePicker1.Value
+            .phone = PhoneNumberTextBox.Text
             .classGroup = classComboBox.Text
         End With
 
@@ -100,8 +101,10 @@
         Dim updateOk As Boolean
         Dim messageString As String
         theNewStudentRec.matric = matricTextBox.Text
+        theNewStudentRec.ic = icNumberTextBox.Text
         theNewStudentRec.name = nameTextBox.Text
         theNewStudentRec.dob = dobDateTimePicker1.Value
+        theNewStudentRec.phone = PhoneNumberTextBox.Text
         theNewStudentRec.classGroup = classComboBox.Text
         updateOk = myStudent.updateThisStudent(oldStudentRec, theNewStudentRec)
         If updateOk Then
@@ -113,7 +116,7 @@
 
     Private Sub dobDateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dobDateTimePicker1.ValueChanged
         'MessageBox.Show(dobDateTimePicker1.Value.ToString("dd-MM-yyyy"))
-        MessageBox.Show(dobDateTimePicker1.Value.ToShortDateString)
+        'MessageBox.Show(dobDateTimePicker1.Value.ToShortDateString)
 
     End Sub
 
