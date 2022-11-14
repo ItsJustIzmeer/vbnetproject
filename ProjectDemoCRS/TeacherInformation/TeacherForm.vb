@@ -19,6 +19,7 @@
                 .nameTextBox.Text = OldTeacherRec.name
                 .dobDateTimePicker1.Value = OldTeacherRec.dob.Date
                 .PhoneNumberTextBox.Text = OldTeacherRec.phone
+                .subjectCodeBox.Text = OldTeacherRec.subject
 
             End With
         Catch ex As Exception
@@ -49,15 +50,17 @@
         With theNewTeacherRec
             .ic = icNumberTextBox.Text
             .id = idTextBox.Text
+            .gender = getLevelFromRadioButton()
             .name = nameTextBox.Text
             .dob = dobDateTimePicker1.Value
             .phone = PhoneNumberTextBox.Text
+            .subject = subjectCodeBox.Text
         End With
 
         addOk = myTeacher.addTeacher(theNewTeacherRec)
         If addOk Then
-            messageString = "New student with matric : " & theNewTeacherRec.id & " has been added"
-            MessageBox.Show(messageString, "Add New Student ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            messageString = "New Teacher with ID : " & theNewTeacherRec.id & " has been added"
+            MessageBox.Show(messageString, "Add New Teacher ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         End If
     End Sub
@@ -67,8 +70,11 @@
             .idTextBox.Clear()
             .icNumberTextBox.Clear()
             .nameTextBox.Clear()
-
-            '.classComboBox.Text = ""
+            .MaleRadioButton.Checked = False
+            .FemaleRadioButton.Checked = False
+            .dobDateTimePicker1.Value = DateTime.Today
+            .PhoneNumberTextBox.Clear()
+            .subjectCodeBox.SelectedIndex = -1
         End With
     End Sub
 
@@ -83,14 +89,33 @@
         theNewTeacherRec.id = idTextBox.Text
         theNewTeacherRec.ic = icNumberTextBox.Text
         theNewTeacherRec.name = nameTextBox.Text
+        theNewTeacherRec.gender = getLevelFromRadioButton()
         theNewTeacherRec.dob = dobDateTimePicker1.Value
         theNewTeacherRec.phone = PhoneNumberTextBox.Text
+        theNewTeacherRec.subject = subjectCodeBox.Text
         updateOk = myTeacher.updateThisTeacher(oldTeacherRec, theNewTeacherRec)
         If updateOk Then
-            messageString = "Teacher with id : " & theNewTeacherRec.id & " has been updated"
-            MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            messageString = "Teacher with ID : " & theNewTeacherRec.id & " has been updated"
+            MessageBox.Show(messageString, "Update Teacher Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         End If
+    End Sub
+
+    Private Function getLevelFromRadioButton() As String
+        If MaleRadioButton.Checked Then
+            Return "MALE"
+        Else
+            Return "FEMALE"
+        End If
+    End Function
+
+    Private Sub displayLevel(level As String)
+        If level = "MALE" Then
+            MaleRadioButton.Checked = True
+        Else
+            FemaleRadioButton.Checked = True
+        End If
+
     End Sub
 
     Private Sub dobDateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dobDateTimePicker1.ValueChanged
@@ -99,4 +124,18 @@
 
     End Sub
 
+    Private Sub TeacherForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.subjectCodeBox.Items.Add("BM001")
+        Me.subjectCodeBox.Items.Add("ENG001")
+        Me.subjectCodeBox.Items.Add("MATH001")
+        Me.subjectCodeBox.Items.Add("SCI001")
+        Me.subjectCodeBox.Items.Add("PAI001")
+        Me.subjectCodeBox.Items.Add("PM001")
+        Me.subjectCodeBox.Items.Add("GEO002")
+        Me.subjectCodeBox.Items.Add("PHY002")
+        Me.subjectCodeBox.Items.Add("CHEM002")
+        Me.subjectCodeBox.Items.Add("BIO002")
+        Me.subjectCodeBox.Items.Add("ADDM002")
+        Me.subjectCodeBox.Items.Add("SEJ002")
+    End Sub
 End Class

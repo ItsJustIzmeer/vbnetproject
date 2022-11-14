@@ -103,3 +103,6 @@ C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCR
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherListForm.resources
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.AboutBox.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserFormList.resources

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TeacherForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,12 @@ Partial Class TeacherForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dobDateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.nameTextBox = New System.Windows.Forms.TextBox()
-        Me.classComboBox = New System.Windows.Forms.ComboBox()
+        Me.subjectCodeBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -37,14 +37,20 @@ Partial Class TeacherForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.MaleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.FemaleRadioButton)
+        Me.GroupBox1.Controls.Add(Me.MaleRadioButton)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.dobDateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.nameTextBox)
-        Me.GroupBox1.Controls.Add(Me.classComboBox)
+        Me.GroupBox1.Controls.Add(Me.subjectCodeBox)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.PhoneNumberTextBox)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -69,7 +75,7 @@ Partial Class TeacherForm
         'dobDateTimePicker1
         '
         Me.dobDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dobDateTimePicker1.Location = New System.Drawing.Point(205, 217)
+        Me.dobDateTimePicker1.Location = New System.Drawing.Point(200, 272)
         Me.dobDateTimePicker1.Name = "dobDateTimePicker1"
         Me.dobDateTimePicker1.Size = New System.Drawing.Size(260, 31)
         Me.dobDateTimePicker1.TabIndex = 21
@@ -81,26 +87,26 @@ Partial Class TeacherForm
         Me.nameTextBox.Size = New System.Drawing.Size(262, 31)
         Me.nameTextBox.TabIndex = 20
         '
-        'classComboBox
+        'subjectCodeBox
         '
-        Me.classComboBox.FormattingEnabled = True
-        Me.classComboBox.Location = New System.Drawing.Point(203, 314)
-        Me.classComboBox.Name = "classComboBox"
-        Me.classComboBox.Size = New System.Drawing.Size(262, 33)
-        Me.classComboBox.TabIndex = 19
+        Me.subjectCodeBox.FormattingEnabled = True
+        Me.subjectCodeBox.Location = New System.Drawing.Point(198, 369)
+        Me.subjectCodeBox.Name = "subjectCodeBox"
+        Me.subjectCodeBox.Size = New System.Drawing.Size(262, 33)
+        Me.subjectCodeBox.TabIndex = 19
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 314)
+        Me.Label7.Location = New System.Drawing.Point(4, 369)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(66, 25)
+        Me.Label7.Size = New System.Drawing.Size(141, 25)
         Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Class"
+        Me.Label7.Text = "Subject Code"
         '
         'PhoneNumberTextBox
         '
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(203, 264)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(198, 319)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(262, 31)
         Me.PhoneNumberTextBox.TabIndex = 16
@@ -108,7 +114,7 @@ Partial Class TeacherForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 264)
+        Me.Label6.Location = New System.Drawing.Point(4, 319)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(155, 25)
         Me.Label6.TabIndex = 15
@@ -117,7 +123,7 @@ Partial Class TeacherForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 212)
+        Me.Label5.Location = New System.Drawing.Point(4, 267)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(129, 25)
         Me.Label5.TabIndex = 13
@@ -182,6 +188,37 @@ Partial Class TeacherForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Id Number"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(8, 216)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(83, 25)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Gender"
+        '
+        'MaleRadioButton
+        '
+        Me.MaleRadioButton.AutoSize = True
+        Me.MaleRadioButton.Location = New System.Drawing.Point(208, 224)
+        Me.MaleRadioButton.Name = "MaleRadioButton"
+        Me.MaleRadioButton.Size = New System.Drawing.Size(77, 29)
+        Me.MaleRadioButton.TabIndex = 23
+        Me.MaleRadioButton.TabStop = True
+        Me.MaleRadioButton.Text = "Male"
+        Me.MaleRadioButton.UseVisualStyleBackColor = True
+        '
+        'FemaleRadioButton
+        '
+        Me.FemaleRadioButton.AutoSize = True
+        Me.FemaleRadioButton.Location = New System.Drawing.Point(328, 224)
+        Me.FemaleRadioButton.Name = "FemaleRadioButton"
+        Me.FemaleRadioButton.Size = New System.Drawing.Size(101, 29)
+        Me.FemaleRadioButton.TabIndex = 24
+        Me.FemaleRadioButton.TabStop = True
+        Me.FemaleRadioButton.Text = "Female"
+        Me.FemaleRadioButton.UseVisualStyleBackColor = True
+        '
         'TeacherForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -209,6 +246,9 @@ Partial Class TeacherForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents classComboBox As ComboBox
+    Friend WithEvents subjectCodeBox As ComboBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents FemaleRadioButton As RadioButton
+    Friend WithEvents MaleRadioButton As RadioButton
+    Friend WithEvents Label4 As Label
 End Class

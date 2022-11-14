@@ -1,43 +1,38 @@
 ﻿Imports System.Data.OleDb
-Friend Structure TeacherRecord
-    Dim id, ic, name, email, phone, gender, subject As String
-    Dim dob As Date
+Friend Structure UserRecord
+    Dim username, password, userlevel As String
 End Structure
-Public Class Teacher
-
+Public Class User
     Private con As New OleDb.OleDbConnection
-    Friend Function getTeacherRecord(id) As TeacherRecord
+
+    Friend Function getUserRecord(username) As UserRecord
         Dim dr As OleDbDataReader
-        Dim teacherRec As New TeacherRecord
+        Dim userRec As New UserRecord
         Try
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "select * FROM teacher WHERE (idTeacher = '" & id & "')"
+            sql = "select * FROM userTbl WHERE (userName = '" & username & "')"
 
             Dim cmd As New OleDbCommand(sql, con)
             dr = cmd.ExecuteReader
             If dr.HasRows Then
                 dr.Read()
-                teacherRec.ic = dr("icNumber").ToString
-                teacherRec.id = dr("idTeacher").ToString
-                teacherRec.name = dr("name").ToString
-                teacherRec.gender = dr("gender").ToString
-                teacherRec.subject = dr("subjectCode").ToString
-                teacherRec.phone = dr("phoneNumber").ToString
-                teacherRec.dob = dr("dateOfBirth").ToString
+                userRec.username = dr("userName").ToString
+                userRec.password = dr("password").ToString
+                userRec.userlevel = dr("userLevel").ToString
                 con.Close()
-                Return teacherRec
+                Return userRec
             End If
         Catch
-            MessageBox.Show("Error accessing Teacher Record for Teacher with ID :" & id)
+            MessageBox.Show("Error accessing user record for user with username :" & username)
             con.Close()
-            Return teacherRec
+            Return userRec
         End Try
-        Return teacherRec
+        Return userRec
     End Function
 
-    Friend Function addTeacher(newTeacherRec As TeacherRecord) As Boolean
+    Friend Function addUser(newUserRec As UserRecord) As Boolean
         Try
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
@@ -48,8 +43,8 @@ Public Class Teacher
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into teacher(idTeacher,icNumber,name,gender,dateOfBirth,phoneNumber,subjectCode)"
-            sql = sql & " values('" & newTeacherRec.id & "','" & newTeacherRec.ic & "','" & newTeacherRec.name & "','" & newTeacherRec.gender & "','" & newTeacherRec.dob & "','" & newTeacherRec.phone & "','" & newTeacherRec.subject & "')"
+            sql = "insert into userTbl(userName,[password],userLevel)"
+            sql = sql & " values('" & newUserRec.username & "','" & newUserRec.password & "','" & newUserRec.userlevel & "')"
             'insert into student(matricNumber,icNumber,name,dateOfBirth,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
@@ -59,7 +54,7 @@ Public Class Teacher
             Return True
         Catch ex As Exception
 
-            MessageBox.Show("Error adding new Teacher Record. Message:" & ex.ToString)
+            MessageBox.Show("Error adding new user record. Message:" & ex.ToString)
             con.Close()
             Return False
         End Try
@@ -67,21 +62,15 @@ Public Class Teacher
 
     End Function
 
-    Friend Function updateThisTeacher(oldTeacherRec As TeacherRecord, newTeacherRec As TeacherRecord) As Boolean
+    Friend Function updateThisUser(oldUSerRec As UserRecord, newUserRec As UserRecord) As Boolean
         Try
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sql = "update teacher set idTeacher ='" & newTeacherRec.id & "',"
-            sql = sql & " icNumber ='" & newTeacherRec.ic & "',"
-            sql = sql & " name ='" & newTeacherRec.name & "',"
-            sql = sql & " gender ='" & newTeacherRec.gender & "',"
-            sql = sql & " dateOfBirth ='" & newTeacherRec.dob & "',"
-            sql = sql & " subjectCode ='" & newTeacherRec.subject & "',"
-            sql = sql & " phoneNumber ='" & newTeacherRec.phone & "'"
-
-            sql = sql & " where idTeacher ='" & oldTeacherRec.id & "'"
+            sql = "update userTbl set userName ='" & newUserRec.username & "',"
+            sql = sql & " password ='" & newUserRec.password & "',"
+            sql = sql & " where userName ='" & newUserRec.username & "'"
             'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
@@ -89,20 +78,20 @@ Public Class Teacher
             Return True
 
         Catch ex As Exception
-            MessageBox.Show("Error updating Teacher Record. Message:" & ex.ToString)
+            MessageBox.Show("Error updating group record. Message:" & ex.ToString)
             Return False
         End Try
 
 
     End Function
 
-    Friend Function deleteTeacherRecord(id As String) As Boolean
+    Friend Function deleteUserRecord(username As String) As Boolean
         Try
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "DELETE FROM teacher WHERE (idTeacher = '" & id & "')"
-            'MessageBox.Show(sql)
+            sql = "DELETE FROM userTbl WHERE (userName = '" & username & "')"
+            MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
             con.Close()

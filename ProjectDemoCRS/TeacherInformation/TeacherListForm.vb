@@ -91,7 +91,7 @@
     Private Sub DeleteTeacherButton_Click(sender As Object, e As EventArgs) Handles DeleteTeacherButton.Click
         Dim dialogResult As MsgBoxResult
         Dim deletedOK As Boolean
-        Dim messageString = "Delete Teacher  :" & mIDString
+        Dim messageString = "Delete Teacher with ID :" & mIDString
         If mIDString <> "" Then
             dialogResult = MessageBox.Show(messageString, "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If dialogResult = MsgBoxResult.Ok Then

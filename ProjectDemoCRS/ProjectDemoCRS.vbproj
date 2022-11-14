@@ -16,7 +16,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrsMainForm.Designer.vb">
       <DependentUpon>CrsMainForm.vb</DependentUpon>
     </Compile>
@@ -149,8 +155,24 @@
     <Compile Include="TeacherInformation\TeacherListForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\User.vb" />
+    <Compile Include="User\UserForm.Designer.vb">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserFormList.Designer.vb">
+      <DependentUpon>UserFormList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserFormList.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrsMainForm.resx">
       <DependentUpon>CrsMainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherInformation\TeacherListForm.resx">
       <DependentUpon>TeacherListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserForm.resx">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserFormList.resx">
+      <DependentUpon>UserFormList.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
