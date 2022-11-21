@@ -122,12 +122,6 @@
         displayAllStudent()
     End Sub
 
-    Private Sub RegistrationButton_Click(sender As Object, e As EventArgs) Handles RegistrationButton.Click
-
-        RegistrationForm.showStudentInformation(mMatricString)
-        RegistrationForm.ShowDialog()
-    End Sub
-
     Private Sub ICButton_Click(sender As Object, e As EventArgs) Handles ICButton.Click
         clearStudentGrid()
 

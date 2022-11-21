@@ -106,5 +106,17 @@ Public Class StudentGroupListForm
         End If
     End Sub
 
+    Private Sub GroupIdButton_Click(sender As Object, e As EventArgs) Handles GroupIdButton.Click
+        clearStudentGrid()
+        sqlString = "Select * from studentGroupTbl where groupId like '%" & searchTextBox.Text & "%'"
+        Debug.WriteLine(sqlString)
+        dataAdapter = New OleDb.OleDbDataAdapter(sqlString, conn)
+        dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
+        Me.StudentGroupDataGridView.DataMember = "ihsanTuitionCenterDb"
+        StudentGroupDataGridView.DataSource = ds
+    End Sub
 
+    Private Sub displayAllButton_Click(sender As Object, e As EventArgs) Handles displayAllButton.Click
+        displayAllStudentGroup()
+    End Sub
 End Class

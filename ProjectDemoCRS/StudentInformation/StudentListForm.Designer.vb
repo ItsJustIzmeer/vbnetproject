@@ -28,14 +28,13 @@ Partial Class StudentListForm
         Me.DeleteStudentButton = New System.Windows.Forms.Button()
         Me.StudentDataGridView = New System.Windows.Forms.DataGridView()
         Me.Search = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.displayAllButton = New System.Windows.Forms.Button()
         Me.nameButton = New System.Windows.Forms.Button()
         Me.ICButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
-        Me.RegistrationButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Search.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,7 +80,7 @@ Partial Class StudentListForm
         '
         Me.StudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StudentDataGridView.Location = New System.Drawing.Point(16, 186)
-        Me.StudentDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StudentDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.StudentDataGridView.MultiSelect = False
         Me.StudentDataGridView.Name = "StudentDataGridView"
         Me.StudentDataGridView.RowHeadersWidth = 51
@@ -98,20 +97,31 @@ Partial Class StudentListForm
         Me.Search.Controls.Add(Me.Label1)
         Me.Search.Controls.Add(Me.searchTextBox)
         Me.Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Search.Location = New System.Drawing.Point(16, 15)
-        Me.Search.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Search.Location = New System.Drawing.Point(16, 16)
+        Me.Search.Margin = New System.Windows.Forms.Padding(4)
         Me.Search.Name = "Search"
-        Me.Search.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Search.Padding = New System.Windows.Forms.Padding(4)
         Me.Search.Size = New System.Drawing.Size(1571, 101)
         Me.Search.TabIndex = 13
         Me.Search.TabStop = False
         Me.Search.Text = "Search"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(1432, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(132, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
         'displayAllButton
         '
         Me.displayAllButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.displayAllButton.Location = New System.Drawing.Point(1132, 49)
-        Me.displayAllButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.displayAllButton.Margin = New System.Windows.Forms.Padding(4)
         Me.displayAllButton.Name = "displayAllButton"
         Me.displayAllButton.Size = New System.Drawing.Size(165, 38)
         Me.displayAllButton.TabIndex = 4
@@ -122,7 +132,7 @@ Partial Class StudentListForm
         '
         Me.nameButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.nameButton.Location = New System.Drawing.Point(932, 46)
-        Me.nameButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nameButton.Margin = New System.Windows.Forms.Padding(4)
         Me.nameButton.Name = "nameButton"
         Me.nameButton.Size = New System.Drawing.Size(165, 42)
         Me.nameButton.TabIndex = 3
@@ -133,7 +143,7 @@ Partial Class StudentListForm
         '
         Me.ICButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ICButton.Location = New System.Drawing.Point(719, 49)
-        Me.ICButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ICButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ICButton.Name = "ICButton"
         Me.ICButton.Size = New System.Drawing.Size(165, 38)
         Me.ICButton.TabIndex = 2
@@ -153,22 +163,10 @@ Partial Class StudentListForm
         'searchTextBox
         '
         Me.searchTextBox.Location = New System.Drawing.Point(293, 49)
-        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.searchTextBox.Name = "searchTextBox"
         Me.searchTextBox.Size = New System.Drawing.Size(392, 37)
         Me.searchTextBox.TabIndex = 0
-        '
-        'RegistrationButton
-        '
-        Me.RegistrationButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.RegistrationButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RegistrationButton.Location = New System.Drawing.Point(16, 575)
-        Me.RegistrationButton.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
-        Me.RegistrationButton.Name = "RegistrationButton"
-        Me.RegistrationButton.Size = New System.Drawing.Size(408, 74)
-        Me.RegistrationButton.TabIndex = 15
-        Me.RegistrationButton.Text = "View Subject Registration"
-        Me.RegistrationButton.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -181,17 +179,6 @@ Partial Class StudentListForm
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Click on student matric number to enable more option"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(1432, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(132, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
         'StudentListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -200,13 +187,12 @@ Partial Class StudentListForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1616, 682)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.RegistrationButton)
         Me.Controls.Add(Me.Search)
         Me.Controls.Add(Me.updateStudentButton)
         Me.Controls.Add(Me.AddStudentButton)
         Me.Controls.Add(Me.DeleteStudentButton)
         Me.Controls.Add(Me.StudentDataGridView)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "StudentListForm"
         Me.Text = "StudentListForm"
         CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -228,7 +214,6 @@ Partial Class StudentListForm
     Friend WithEvents Label1 As Label
     Friend WithEvents searchTextBox As TextBox
     Friend WithEvents displayAllButton As Button
-    Friend WithEvents RegistrationButton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class

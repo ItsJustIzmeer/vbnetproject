@@ -27,14 +27,22 @@ Partial Class StudentGroupListForm
         Me.updateStudentGroupButton = New System.Windows.Forms.Button()
         Me.AddStudentGroupButton = New System.Windows.Forms.Button()
         Me.DeleteStudentGroupButton = New System.Windows.Forms.Button()
+        Me.Search = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.displayAllButton = New System.Windows.Forms.Button()
+        Me.GroupIdButton = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.searchTextBox = New System.Windows.Forms.TextBox()
         CType(Me.StudentGroupDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Search.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StudentGroupDataGridView
         '
         Me.StudentGroupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StudentGroupDataGridView.Location = New System.Drawing.Point(16, 165)
-        Me.StudentGroupDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StudentGroupDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.StudentGroupDataGridView.MultiSelect = False
         Me.StudentGroupDataGridView.Name = "StudentGroupDataGridView"
         Me.StudentGroupDataGridView.RowHeadersWidth = 51
@@ -77,6 +85,75 @@ Partial Class StudentGroupListForm
         Me.DeleteStudentGroupButton.Text = "Delete Class"
         Me.DeleteStudentGroupButton.UseVisualStyleBackColor = False
         '
+        'Search
+        '
+        Me.Search.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Search.Controls.Add(Me.PictureBox1)
+        Me.Search.Controls.Add(Me.displayAllButton)
+        Me.Search.Controls.Add(Me.GroupIdButton)
+        Me.Search.Controls.Add(Me.Label1)
+        Me.Search.Controls.Add(Me.searchTextBox)
+        Me.Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Search.Location = New System.Drawing.Point(16, 32)
+        Me.Search.Margin = New System.Windows.Forms.Padding(4)
+        Me.Search.Name = "Search"
+        Me.Search.Padding = New System.Windows.Forms.Padding(4)
+        Me.Search.Size = New System.Drawing.Size(1176, 101)
+        Me.Search.TabIndex = 14
+        Me.Search.TabStop = False
+        Me.Search.Text = "Search"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(1432, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(132, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
+        'displayAllButton
+        '
+        Me.displayAllButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.displayAllButton.Location = New System.Drawing.Point(936, 48)
+        Me.displayAllButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.displayAllButton.Name = "displayAllButton"
+        Me.displayAllButton.Size = New System.Drawing.Size(165, 38)
+        Me.displayAllButton.TabIndex = 4
+        Me.displayAllButton.Text = "Display All"
+        Me.displayAllButton.UseVisualStyleBackColor = False
+        '
+        'GroupIdButton
+        '
+        Me.GroupIdButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.GroupIdButton.Location = New System.Drawing.Point(719, 49)
+        Me.GroupIdButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupIdButton.Name = "GroupIdButton"
+        Me.GroupIdButton.Size = New System.Drawing.Size(185, 38)
+        Me.GroupIdButton.TabIndex = 2
+        Me.GroupIdButton.Text = "By Group ID"
+        Me.GroupIdButton.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(132, 49)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(124, 31)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Group ID"
+        '
+        'searchTextBox
+        '
+        Me.searchTextBox.Location = New System.Drawing.Point(293, 49)
+        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.searchTextBox.Name = "searchTextBox"
+        Me.searchTextBox.Size = New System.Drawing.Size(392, 37)
+        Me.searchTextBox.TabIndex = 0
+        '
         'StudentGroupListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -84,15 +161,19 @@ Partial Class StudentGroupListForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1202, 689)
+        Me.Controls.Add(Me.Search)
         Me.Controls.Add(Me.updateStudentGroupButton)
         Me.Controls.Add(Me.AddStudentGroupButton)
         Me.Controls.Add(Me.DeleteStudentGroupButton)
         Me.Controls.Add(Me.StudentGroupDataGridView)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "StudentGroupListForm"
         Me.Text = "StudentGroupForm"
         CType(Me.StudentGroupDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Search.ResumeLayout(False)
+        Me.Search.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -101,4 +182,10 @@ Partial Class StudentGroupListForm
     Friend WithEvents updateStudentGroupButton As Button
     Friend WithEvents AddStudentGroupButton As Button
     Friend WithEvents DeleteStudentGroupButton As Button
+    Friend WithEvents Search As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents displayAllButton As Button
+    Friend WithEvents GroupIdButton As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents searchTextBox As TextBox
 End Class

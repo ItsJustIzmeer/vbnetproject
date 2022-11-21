@@ -26,7 +26,7 @@
         AboutBox.ShowDialog()
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub LogOutButton_Click(sender As Object, e As EventArgs) Handles LogOutButton.Click
         Dim logoutResult As DialogResult
 
         logoutResult = MessageBox.Show("Are you sure to Log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -39,7 +39,28 @@
         End If
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub StudentListButton_Click(sender As Object, e As EventArgs) Handles StudentListButton.Click
+        StudentListForm.ShowDialog()
+    End Sub
+    Private Sub TeacherListButton_Click(sender As Object, e As EventArgs) Handles TeacherListButton.Click
+        TeacherListForm.ShowDialog()
+    End Sub
+    Private Sub ClassListButton_Click(sender As Object, e As EventArgs) Handles ClassListButton.Click
+        StudentGroupListForm.ShowDialog()
+    End Sub
+
+    Private Sub RegisterSubjectButton_Click(sender As Object, e As EventArgs) Handles RegisterSubjectButton.Click
+        StudentInformationForm.ShowDialog()
+    End Sub
+
+    Private Sub UserListButton_Click(sender As Object, e As EventArgs) Handles UserListButton.Click
         UserFormList.ShowDialog()
+    End Sub
+    Private Sub ViewStudentListButton_Click(sender As Object, e As EventArgs) Handles ViewStudentListButton.Click
+        StudentViewListForm.ShowDialog()
+    End Sub
+
+    Private Sub SubjectListButton_Click(sender As Object, e As EventArgs) Handles SubjectListButton.Click
+        SubjectListForm.ShowDialog()
     End Sub
 End Class

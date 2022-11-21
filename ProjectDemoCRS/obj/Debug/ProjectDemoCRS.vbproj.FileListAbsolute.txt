@@ -129,3 +129,7 @@ C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\o
 C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.exe
 C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.xml
 C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentInformationForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListSubjectCodeForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentViewListForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources

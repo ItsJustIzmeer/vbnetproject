@@ -89,7 +89,7 @@ Public Class RegistrationForm
         If col = 0 And row < noOfRec - 1 Then ' allow subjectCode selection only
             msubjectCodeString = SubjectRegisterDataGridView.CurrentCell.Value
         Else
-            msubjectCodeString=""
+            msubjectCodeString = ""
         End If
 
 
@@ -105,7 +105,7 @@ Public Class RegistrationForm
         Dim deletedOK As Boolean
         Dim messageString = "Drop " & msubjectCodeString & " subject"
         If msubjectCodeString <> "" Then
-        dialogResult = MessageBox.Show(messageString, "Confirm Drop", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+            dialogResult = MessageBox.Show(messageString, "Confirm Drop", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If dialogResult = MsgBoxResult.Ok Then
                 'deletedOK = mySubject.dropStudentSubject(mId, msubjectCodeString)
 

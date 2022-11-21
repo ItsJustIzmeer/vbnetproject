@@ -30,30 +30,28 @@ Partial Class CrsMainForm
         Me.TeacherInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StafInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TeacherListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FindStaffTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TeacherReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StaffReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StudentReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TeacherListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubjectInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubjectListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ClassListButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TeacherListButton = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ViewStudentListButton = New System.Windows.Forms.Button()
+        Me.StudentListButton = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.SubjectListButton = New System.Windows.Forms.Button()
+        Me.RegisterSubjectButton = New System.Windows.Forms.Button()
+        Me.LogOutButton = New System.Windows.Forms.Button()
+        Me.UserListButton = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -70,10 +68,10 @@ Partial Class CrsMainForm
         'MenuStrip2
         '
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.RegistrarToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ReportingToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.RegistrarToolStripMenuItem, Me.UserInformationToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripMenuItem1, Me.SubjectInfoToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(1135, 30)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1135, 28)
         Me.MenuStrip2.TabIndex = 1
         Me.MenuStrip2.Text = "MenuStrip2"
         '
@@ -81,7 +79,7 @@ Partial Class CrsMainForm
         '
         Me.ApplicationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
         Me.ApplicationToolStripMenuItem.Name = "ApplicationToolStripMenuItem"
-        Me.ApplicationToolStripMenuItem.Size = New System.Drawing.Size(46, 26)
+        Me.ApplicationToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
         Me.ApplicationToolStripMenuItem.Text = "File"
         '
         'LogoutToolStripMenuItem
@@ -94,7 +92,7 @@ Partial Class CrsMainForm
         '
         Me.RegistrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherInformationToolStripMenuItem, Me.StafInformationToolStripMenuItem, Me.StudentInformationToolStripMenuItem})
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(82, 26)
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
         '
         'TeacherInformationToolStripMenuItem
@@ -115,42 +113,24 @@ Partial Class CrsMainForm
         Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
         Me.StudentInformationToolStripMenuItem.Text = "Enrol Student"
         '
-        'ToolStripMenuItem1
+        'UserInformationToolStripMenuItem
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherListToolStripMenuItem, Me.FindStaffTeacherToolStripMenuItem, Me.AddStaffToolStripMenuItem, Me.AddTeacherToolStripMenuItem})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(138, 26)
-        Me.ToolStripMenuItem1.Text = "Staff and Teacher"
+        Me.UserInformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserListToolStripMenuItem})
+        Me.UserInformationToolStripMenuItem.Name = "UserInformationToolStripMenuItem"
+        Me.UserInformationToolStripMenuItem.Size = New System.Drawing.Size(134, 24)
+        Me.UserInformationToolStripMenuItem.Text = "User Information"
         '
-        'TeacherListToolStripMenuItem
+        'UserListToolStripMenuItem
         '
-        Me.TeacherListToolStripMenuItem.Name = "TeacherListToolStripMenuItem"
-        Me.TeacherListToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
-        Me.TeacherListToolStripMenuItem.Text = "Teacher List"
-        '
-        'FindStaffTeacherToolStripMenuItem
-        '
-        Me.FindStaffTeacherToolStripMenuItem.Name = "FindStaffTeacherToolStripMenuItem"
-        Me.FindStaffTeacherToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
-        Me.FindStaffTeacherToolStripMenuItem.Text = "Find Staff/Teacher"
-        '
-        'AddStaffToolStripMenuItem
-        '
-        Me.AddStaffToolStripMenuItem.Name = "AddStaffToolStripMenuItem"
-        Me.AddStaffToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
-        Me.AddStaffToolStripMenuItem.Text = "Add Staff"
-        '
-        'AddTeacherToolStripMenuItem
-        '
-        Me.AddTeacherToolStripMenuItem.Name = "AddTeacherToolStripMenuItem"
-        Me.AddTeacherToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
-        Me.AddTeacherToolStripMenuItem.Text = "Add Teacher"
+        Me.UserListToolStripMenuItem.Name = "UserListToolStripMenuItem"
+        Me.UserListToolStripMenuItem.Size = New System.Drawing.Size(147, 26)
+        Me.UserListToolStripMenuItem.Text = "User List"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentListToolStripMenuItem})
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(156, 26)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(156, 24)
         Me.ToolStripMenuItem2.Text = "Student Information"
         '
         'StudentListToolStripMenuItem
@@ -159,36 +139,37 @@ Partial Class CrsMainForm
         Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.StudentListToolStripMenuItem.Text = "Student List"
         '
-        'ReportingToolStripMenuItem
+        'ToolStripMenuItem1
         '
-        Me.ReportingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherReportToolStripMenuItem, Me.StaffReportToolStripMenuItem, Me.StudentReportToolStripMenuItem})
-        Me.ReportingToolStripMenuItem.Name = "ReportingToolStripMenuItem"
-        Me.ReportingToolStripMenuItem.Size = New System.Drawing.Size(89, 26)
-        Me.ReportingToolStripMenuItem.Text = "Reporting"
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherListToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(156, 24)
+        Me.ToolStripMenuItem1.Text = "Teacher Information"
         '
-        'TeacherReportToolStripMenuItem
+        'TeacherListToolStripMenuItem
         '
-        Me.TeacherReportToolStripMenuItem.Name = "TeacherReportToolStripMenuItem"
-        Me.TeacherReportToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
-        Me.TeacherReportToolStripMenuItem.Text = "Teacher Report"
+        Me.TeacherListToolStripMenuItem.Name = "TeacherListToolStripMenuItem"
+        Me.TeacherListToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
+        Me.TeacherListToolStripMenuItem.Text = "Teacher List"
         '
-        'StaffReportToolStripMenuItem
+        'SubjectInfoToolStripMenuItem
         '
-        Me.StaffReportToolStripMenuItem.Name = "StaffReportToolStripMenuItem"
-        Me.StaffReportToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
-        Me.StaffReportToolStripMenuItem.Text = "Staff Report"
+        Me.SubjectInfoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubjectListToolStripMenuItem})
+        Me.SubjectInfoToolStripMenuItem.Name = "SubjectInfoToolStripMenuItem"
+        Me.SubjectInfoToolStripMenuItem.Size = New System.Drawing.Size(154, 24)
+        Me.SubjectInfoToolStripMenuItem.Text = "Subject Information"
         '
-        'StudentReportToolStripMenuItem
+        'SubjectListToolStripMenuItem
         '
-        Me.StudentReportToolStripMenuItem.Name = "StudentReportToolStripMenuItem"
-        Me.StudentReportToolStripMenuItem.Size = New System.Drawing.Size(192, 26)
-        Me.StudentReportToolStripMenuItem.Text = "Student Report"
+        Me.SubjectListToolStripMenuItem.Name = "SubjectListToolStripMenuItem"
+        Me.SubjectListToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
+        Me.SubjectListToolStripMenuItem.Text = "Subject List"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.AbutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 26)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem
@@ -203,17 +184,17 @@ Partial Class CrsMainForm
         Me.AbutToolStripMenuItem.Size = New System.Drawing.Size(136, 26)
         Me.AbutToolStripMenuItem.Text = "About"
         '
-        'Button1
+        'ClassListButton
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(243, 49)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 46)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Class List"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ClassListButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClassListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClassListButton.Location = New System.Drawing.Point(243, 49)
+        Me.ClassListButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.ClassListButton.Name = "ClassListButton"
+        Me.ClassListButton.Size = New System.Drawing.Size(135, 46)
+        Me.ClassListButton.TabIndex = 0
+        Me.ClassListButton.Text = "Class List"
+        Me.ClassListButton.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -226,102 +207,115 @@ Partial Class CrsMainForm
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "School Management System"
         '
-        'Button2
+        'TeacherListButton
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(21, 49)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(135, 46)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Teacher List"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.TeacherListButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.TeacherListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TeacherListButton.Location = New System.Drawing.Point(21, 49)
+        Me.TeacherListButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.TeacherListButton.Name = "TeacherListButton"
+        Me.TeacherListButton.Size = New System.Drawing.Size(135, 46)
+        Me.TeacherListButton.TabIndex = 1
+        Me.TeacherListButton.Text = "Teacher List"
+        Me.TeacherListButton.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.ViewStudentListButton)
+        Me.GroupBox1.Controls.Add(Me.StudentListButton)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(28, 116)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(213, 147)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(213, 204)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student"
         '
-        'Button3
+        'ViewStudentListButton
         '
-        Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(28, 62)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(135, 46)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Student List"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.ViewStudentListButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ViewStudentListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewStudentListButton.Location = New System.Drawing.Point(28, 132)
+        Me.ViewStudentListButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.ViewStudentListButton.Name = "ViewStudentListButton"
+        Me.ViewStudentListButton.Size = New System.Drawing.Size(135, 52)
+        Me.ViewStudentListButton.TabIndex = 3
+        Me.ViewStudentListButton.Text = "View Student List"
+        Me.ViewStudentListButton.UseVisualStyleBackColor = False
+        '
+        'StudentListButton
+        '
+        Me.StudentListButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.StudentListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StudentListButton.Location = New System.Drawing.Point(28, 62)
+        Me.StudentListButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.StudentListButton.Name = "StudentListButton"
+        Me.StudentListButton.Size = New System.Drawing.Size(135, 46)
+        Me.StudentListButton.TabIndex = 2
+        Me.StudentListButton.Text = "Student List"
+        Me.StudentListButton.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.TeacherListButton)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(28, 331)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(213, 145)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Teacher"
         '
-        'Button4
+        'SubjectListButton
         '
-        Me.Button4.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(49, 46)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(135, 46)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Subject List"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.SubjectListButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.SubjectListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SubjectListButton.Location = New System.Drawing.Point(49, 46)
+        Me.SubjectListButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.SubjectListButton.Name = "SubjectListButton"
+        Me.SubjectListButton.Size = New System.Drawing.Size(135, 46)
+        Me.SubjectListButton.TabIndex = 5
+        Me.SubjectListButton.Text = "Subject List"
+        Me.SubjectListButton.UseVisualStyleBackColor = False
         '
-        'Button5
+        'RegisterSubjectButton
         '
-        Me.Button5.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(33, 49)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(160, 46)
-        Me.Button5.TabIndex = 6
-        Me.Button5.Text = "Register Subject"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.RegisterSubjectButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.RegisterSubjectButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RegisterSubjectButton.Location = New System.Drawing.Point(33, 49)
+        Me.RegisterSubjectButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.RegisterSubjectButton.Name = "RegisterSubjectButton"
+        Me.RegisterSubjectButton.Size = New System.Drawing.Size(160, 46)
+        Me.RegisterSubjectButton.TabIndex = 6
+        Me.RegisterSubjectButton.Text = "Register Subject"
+        Me.RegisterSubjectButton.UseVisualStyleBackColor = False
         '
-        'Button6
+        'LogOutButton
         '
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(962, 529)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(160, 46)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "Log Out"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.LogOutButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogOutButton.Location = New System.Drawing.Point(962, 529)
+        Me.LogOutButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.LogOutButton.Name = "LogOutButton"
+        Me.LogOutButton.Size = New System.Drawing.Size(160, 46)
+        Me.LogOutButton.TabIndex = 7
+        Me.LogOutButton.Text = "Log Out"
+        Me.LogOutButton.UseVisualStyleBackColor = True
         '
-        'Button7
+        'UserListButton
         '
-        Me.Button7.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(25, 49)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(135, 46)
-        Me.Button7.TabIndex = 8
-        Me.Button7.Text = "User List"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.UserListButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.UserListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserListButton.Location = New System.Drawing.Point(25, 49)
+        Me.UserListButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.UserListButton.Name = "UserListButton"
+        Me.UserListButton.Size = New System.Drawing.Size(135, 46)
+        Me.UserListButton.TabIndex = 8
+        Me.UserListButton.Text = "User List"
+        Me.UserListButton.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -336,7 +330,7 @@ Partial Class CrsMainForm
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Button7)
+        Me.GroupBox3.Controls.Add(Me.UserListButton)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(341, 331)
         Me.GroupBox3.Name = "GroupBox3"
@@ -347,7 +341,7 @@ Partial Class CrsMainForm
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.Button4)
+        Me.GroupBox4.Controls.Add(Me.SubjectListButton)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(644, 331)
         Me.GroupBox4.Name = "GroupBox4"
@@ -358,8 +352,8 @@ Partial Class CrsMainForm
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.Button5)
-        Me.GroupBox5.Controls.Add(Me.Button1)
+        Me.GroupBox5.Controls.Add(Me.RegisterSubjectButton)
+        Me.GroupBox5.Controls.Add(Me.ClassListButton)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(644, 118)
         Me.GroupBox5.Name = "GroupBox5"
@@ -378,12 +372,12 @@ Partial Class CrsMainForm
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.LogOutButton)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip2)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "CrsMainForm"
         Me.Text = "CrsMain"
         Me.MenuStrip2.ResumeLayout(False)
@@ -405,32 +399,30 @@ Partial Class CrsMainForm
     Friend WithEvents TeacherInformationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StafInformationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentInformationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TeacherReportToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StaffReportToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StudentReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SubjectInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AbutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents FindStaffTeacherToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddStaffToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddTeacherToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TeacherListToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ClassListButton As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents TeacherListButton As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents StudentListButton As Button
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents SubjectListButton As Button
+    Friend WithEvents RegisterSubjectButton As Button
+    Friend WithEvents LogOutButton As Button
+    Friend WithEvents UserListButton As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents ViewStudentListButton As Button
+    Friend WithEvents SubjectListToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UserInformationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UserListToolStripMenuItem As ToolStripMenuItem
 End Class
