@@ -32,15 +32,17 @@ Partial Class UserForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.AddResetButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'userNameTextBox
         '
-        Me.userNameTextBox.Location = New System.Drawing.Point(299, 59)
-        Me.userNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.userNameTextBox.Location = New System.Drawing.Point(295, 59)
+        Me.userNameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.userNameTextBox.Name = "userNameTextBox"
-        Me.userNameTextBox.Size = New System.Drawing.Size(344, 37)
+        Me.userNameTextBox.Size = New System.Drawing.Size(348, 37)
         Me.userNameTextBox.TabIndex = 25
         '
         'Label1
@@ -76,7 +78,7 @@ Partial Class UserForm
         'passwordTextBox
         '
         Me.passwordTextBox.Location = New System.Drawing.Point(295, 122)
-        Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.passwordTextBox.Name = "passwordTextBox"
         Me.passwordTextBox.Size = New System.Drawing.Size(348, 37)
         Me.passwordTextBox.TabIndex = 26
@@ -84,7 +86,7 @@ Partial Class UserForm
         'userLevelTextBox
         '
         Me.userLevelTextBox.Location = New System.Drawing.Point(295, 180)
-        Me.userLevelTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.userLevelTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.userLevelTextBox.Name = "userLevelTextBox"
         Me.userLevelTextBox.Size = New System.Drawing.Size(348, 37)
         Me.userLevelTextBox.TabIndex = 27
@@ -92,6 +94,7 @@ Partial Class UserForm
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.CancelButton)
         Me.GroupBox1.Controls.Add(Me.userNameTextBox)
         Me.GroupBox1.Controls.Add(Me.AddResetButton)
@@ -102,10 +105,10 @@ Partial Class UserForm
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(21, 20)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(1024, 512)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(973, 512)
         Me.GroupBox1.TabIndex = 28
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "User Information"
@@ -113,8 +116,8 @@ Partial Class UserForm
         'CancelButton
         '
         Me.CancelButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.CancelButton.Location = New System.Drawing.Point(239, 286)
-        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CancelButton.Location = New System.Drawing.Point(487, 286)
+        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(156, 55)
         Me.CancelButton.TabIndex = 23
@@ -124,13 +127,23 @@ Partial Class UserForm
         'AddResetButton
         '
         Me.AddResetButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.AddResetButton.Location = New System.Drawing.Point(43, 286)
-        Me.AddResetButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AddResetButton.Location = New System.Drawing.Point(295, 286)
+        Me.AddResetButton.Margin = New System.Windows.Forms.Padding(4)
         Me.AddResetButton.Name = "AddResetButton"
         Me.AddResetButton.Size = New System.Drawing.Size(156, 55)
         Me.AddResetButton.TabIndex = 22
         Me.AddResetButton.Text = "Button1"
         Me.AddResetButton.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(725, 59)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(208, 158)
+        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.TabStop = False
         '
         'UserForm
         '
@@ -138,13 +151,14 @@ Partial Class UserForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(1017, 554)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "UserForm"
         Me.Text = "UserForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -158,4 +172,5 @@ Partial Class UserForm
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents CancelButton As Button
     Friend WithEvents AddResetButton As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

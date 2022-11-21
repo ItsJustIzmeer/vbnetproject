@@ -22,6 +22,7 @@ Partial Class SendEmailForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SendEmailForm))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PassTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,17 +31,19 @@ Partial Class SendEmailForm
         Me.BrowseButton = New System.Windows.Forms.Button()
         Me.SendButton = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.FileTextBox = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BodyTextBox = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.TitleTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ReceiverTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BodyTextBox = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.FileTextBox = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -97,7 +100,7 @@ Partial Class SendEmailForm
         'BrowseButton
         '
         Me.BrowseButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.BrowseButton.Location = New System.Drawing.Point(160, 272)
+        Me.BrowseButton.Location = New System.Drawing.Point(300, 265)
         Me.BrowseButton.Name = "BrowseButton"
         Me.BrowseButton.Size = New System.Drawing.Size(104, 45)
         Me.BrowseButton.TabIndex = 5
@@ -118,6 +121,7 @@ Partial Class SendEmailForm
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.FileTextBox)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.BodyTextBox)
@@ -130,10 +134,47 @@ Partial Class SendEmailForm
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(320, 40)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(408, 325)
+        Me.GroupBox1.Size = New System.Drawing.Size(455, 325)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Email Login"
+        '
+        'FileTextBox
+        '
+        Me.FileTextBox.Location = New System.Drawing.Point(16, 280)
+        Me.FileTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.FileTextBox.Name = "FileTextBox"
+        Me.FileTextBox.Size = New System.Drawing.Size(132, 30)
+        Me.FileTextBox.TabIndex = 16
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(16, 248)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(147, 25)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "File Attachment"
+        '
+        'BodyTextBox
+        '
+        Me.BodyTextBox.Location = New System.Drawing.Point(16, 168)
+        Me.BodyTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.BodyTextBox.Multiline = True
+        Me.BodyTextBox.Name = "BodyTextBox"
+        Me.BodyTextBox.Size = New System.Drawing.Size(232, 72)
+        Me.BodyTextBox.TabIndex = 14
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(16, 144)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(97, 25)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Comment"
         '
         'TitleTextBox
         '
@@ -171,51 +212,26 @@ Partial Class SendEmailForm
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Email Receiver"
         '
-        'BodyTextBox
-        '
-        Me.BodyTextBox.Location = New System.Drawing.Point(16, 168)
-        Me.BodyTextBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.BodyTextBox.Multiline = True
-        Me.BodyTextBox.Name = "BodyTextBox"
-        Me.BodyTextBox.Size = New System.Drawing.Size(232, 72)
-        Me.BodyTextBox.TabIndex = 14
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 144)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(97, 25)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Comment"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(16, 248)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(147, 25)
-        Me.Label6.TabIndex = 15
-        Me.Label6.Text = "File Attachment"
-        '
-        'FileTextBox
-        '
-        Me.FileTextBox.Location = New System.Drawing.Point(16, 280)
-        Me.FileTextBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.FileTextBox.Name = "FileTextBox"
-        Me.FileTextBox.Size = New System.Drawing.Size(132, 30)
-        Me.FileTextBox.TabIndex = 16
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(273, 56)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(163, 142)
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
         '
         'SendEmailForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
@@ -226,6 +242,7 @@ Partial Class SendEmailForm
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -247,4 +264,5 @@ Partial Class SendEmailForm
     Friend WithEvents ReceiverTextBox As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

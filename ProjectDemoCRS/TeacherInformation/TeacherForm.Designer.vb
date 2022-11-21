@@ -41,11 +41,15 @@ Partial Class TeacherForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.FemaleRadioButton)
         Me.GroupBox1.Controls.Add(Me.MaleRadioButton)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -77,7 +81,7 @@ Partial Class TeacherForm
         '
         Me.FemaleRadioButton.AutoSize = True
         Me.FemaleRadioButton.Location = New System.Drawing.Point(437, 276)
-        Me.FemaleRadioButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FemaleRadioButton.Margin = New System.Windows.Forms.Padding(4)
         Me.FemaleRadioButton.Name = "FemaleRadioButton"
         Me.FemaleRadioButton.Size = New System.Drawing.Size(125, 35)
         Me.FemaleRadioButton.TabIndex = 24
@@ -89,7 +93,7 @@ Partial Class TeacherForm
         '
         Me.MaleRadioButton.AutoSize = True
         Me.MaleRadioButton.Location = New System.Drawing.Point(277, 276)
-        Me.MaleRadioButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaleRadioButton.Margin = New System.Windows.Forms.Padding(4)
         Me.MaleRadioButton.Name = "MaleRadioButton"
         Me.MaleRadioButton.Size = New System.Drawing.Size(93, 35)
         Me.MaleRadioButton.TabIndex = 23
@@ -111,7 +115,7 @@ Partial Class TeacherForm
         '
         Me.dobDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dobDateTimePicker1.Location = New System.Drawing.Point(267, 335)
-        Me.dobDateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dobDateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.dobDateTimePicker1.Name = "dobDateTimePicker1"
         Me.dobDateTimePicker1.Size = New System.Drawing.Size(345, 37)
         Me.dobDateTimePicker1.TabIndex = 21
@@ -119,7 +123,7 @@ Partial Class TeacherForm
         'nameTextBox
         '
         Me.nameTextBox.Location = New System.Drawing.Point(271, 191)
-        Me.nameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.nameTextBox.Name = "nameTextBox"
         Me.nameTextBox.Size = New System.Drawing.Size(348, 37)
         Me.nameTextBox.TabIndex = 20
@@ -128,7 +132,7 @@ Partial Class TeacherForm
         '
         Me.subjectCodeBox.FormattingEnabled = True
         Me.subjectCodeBox.Location = New System.Drawing.Point(264, 454)
-        Me.subjectCodeBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.subjectCodeBox.Margin = New System.Windows.Forms.Padding(4)
         Me.subjectCodeBox.Name = "subjectCodeBox"
         Me.subjectCodeBox.Size = New System.Drawing.Size(348, 38)
         Me.subjectCodeBox.TabIndex = 19
@@ -146,7 +150,7 @@ Partial Class TeacherForm
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.Location = New System.Drawing.Point(264, 393)
-        Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(348, 37)
         Me.PhoneNumberTextBox.TabIndex = 16
@@ -175,7 +179,7 @@ Partial Class TeacherForm
         '
         Me.CancelButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CancelButton.Location = New System.Drawing.Point(391, 514)
-        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(156, 55)
         Me.CancelButton.TabIndex = 7
@@ -186,7 +190,7 @@ Partial Class TeacherForm
         '
         Me.AddUpdateButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.AddUpdateButton.Location = New System.Drawing.Point(195, 514)
-        Me.AddUpdateButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AddUpdateButton.Margin = New System.Windows.Forms.Padding(4)
         Me.AddUpdateButton.Name = "AddUpdateButton"
         Me.AddUpdateButton.Size = New System.Drawing.Size(156, 55)
         Me.AddUpdateButton.TabIndex = 6
@@ -196,7 +200,7 @@ Partial Class TeacherForm
         'icNumberTextBox
         '
         Me.icNumberTextBox.Location = New System.Drawing.Point(271, 133)
-        Me.icNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.icNumberTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.icNumberTextBox.Name = "icNumberTextBox"
         Me.icNumberTextBox.Size = New System.Drawing.Size(348, 37)
         Me.icNumberTextBox.TabIndex = 4
@@ -204,7 +208,7 @@ Partial Class TeacherForm
         'idTextBox
         '
         Me.idTextBox.Location = New System.Drawing.Point(275, 70)
-        Me.idTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.idTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.idTextBox.Name = "idTextBox"
         Me.idTextBox.Size = New System.Drawing.Size(344, 37)
         Me.idTextBox.TabIndex = 3
@@ -239,6 +243,16 @@ Partial Class TeacherForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Id Number"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(699, 70)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(188, 158)
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        '
         'TeacherForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -247,11 +261,12 @@ Partial Class TeacherForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(949, 657)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "TeacherForm"
         Me.Text = "TeacherForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -274,4 +289,5 @@ Partial Class TeacherForm
     Friend WithEvents FemaleRadioButton As RadioButton
     Friend WithEvents MaleRadioButton As RadioButton
     Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

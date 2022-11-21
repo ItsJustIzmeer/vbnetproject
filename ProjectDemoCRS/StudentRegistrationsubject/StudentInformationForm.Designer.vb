@@ -40,6 +40,7 @@ Partial Class StudentInformationForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -47,6 +48,7 @@ Partial Class StudentInformationForm
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Search.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -87,6 +89,7 @@ Partial Class StudentInformationForm
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox2.Controls.Add(Me.PictureBox4)
         Me.GroupBox2.Controls.Add(Me.studentDataGridView)
         Me.GroupBox2.Controls.Add(Me.ViewSubjectCodeButton)
         Me.GroupBox2.Controls.Add(Me.DeleteStudentButton)
@@ -117,7 +120,7 @@ Partial Class StudentInformationForm
         '
         Me.ViewSubjectCodeButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ViewSubjectCodeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ViewSubjectCodeButton.Location = New System.Drawing.Point(872, 328)
+        Me.ViewSubjectCodeButton.Location = New System.Drawing.Point(876, 421)
         Me.ViewSubjectCodeButton.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.ViewSubjectCodeButton.Name = "ViewSubjectCodeButton"
         Me.ViewSubjectCodeButton.Size = New System.Drawing.Size(200, 74)
@@ -129,7 +132,7 @@ Partial Class StudentInformationForm
         '
         Me.DeleteStudentButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.DeleteStudentButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteStudentButton.Location = New System.Drawing.Point(872, 232)
+        Me.DeleteStudentButton.Location = New System.Drawing.Point(876, 333)
         Me.DeleteStudentButton.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.DeleteStudentButton.Name = "DeleteStudentButton"
         Me.DeleteStudentButton.Size = New System.Drawing.Size(200, 74)
@@ -141,7 +144,7 @@ Partial Class StudentInformationForm
         '
         Me.RegistrationButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.RegistrationButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RegistrationButton.Location = New System.Drawing.Point(872, 136)
+        Me.RegistrationButton.Location = New System.Drawing.Point(876, 245)
         Me.RegistrationButton.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.RegistrationButton.Name = "RegistrationButton"
         Me.RegistrationButton.Size = New System.Drawing.Size(200, 74)
@@ -247,10 +250,22 @@ Partial Class StudentInformationForm
         Me.PrintDialog1.AllowSelection = True
         Me.PrintDialog1.UseEXDialog = True
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(876, 32)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(197, 168)
+        Me.PictureBox4.TabIndex = 20
+        Me.PictureBox4.TabStop = False
+        '
         'StudentInformationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1387, 700)
         Me.Controls.Add(Me.Search)
         Me.Controls.Add(Me.GroupBox2)
@@ -265,6 +280,7 @@ Partial Class StudentInformationForm
         Me.Search.ResumeLayout(False)
         Me.Search.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -285,5 +301,5 @@ Partial Class StudentInformationForm
     Friend WithEvents DeleteStudentButton As Button
     Friend WithEvents studentDataGridView As DataGridView
     Friend WithEvents PrintDialog1 As PrintDialog
-
+    Friend WithEvents PictureBox4 As PictureBox
 End Class

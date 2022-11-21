@@ -46,10 +46,12 @@ Partial Class RegistrationForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TotalCreditLabel = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.SubjectRegisterDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -69,13 +71,14 @@ Partial Class RegistrationForm
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
-        Me.GroupBox1.Size = New System.Drawing.Size(1001, 226)
+        Me.GroupBox1.Size = New System.Drawing.Size(938, 226)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Information"
         '
         'PhoneNumberLabel
         '
+        Me.PhoneNumberLabel.BackColor = System.Drawing.SystemColors.Window
         Me.PhoneNumberLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PhoneNumberLabel.Location = New System.Drawing.Point(248, 168)
         Me.PhoneNumberLabel.Name = "PhoneNumberLabel"
@@ -93,14 +96,16 @@ Partial Class RegistrationForm
         '
         'classLabel
         '
+        Me.classLabel.BackColor = System.Drawing.SystemColors.Window
         Me.classLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.classLabel.Location = New System.Drawing.Point(736, 48)
+        Me.classLabel.Location = New System.Drawing.Point(655, 48)
         Me.classLabel.Name = "classLabel"
         Me.classLabel.Size = New System.Drawing.Size(257, 35)
         Me.classLabel.TabIndex = 7
         '
         'icLabel
         '
+        Me.icLabel.BackColor = System.Drawing.SystemColors.Window
         Me.icLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.icLabel.Location = New System.Drawing.Point(248, 125)
         Me.icLabel.Name = "icLabel"
@@ -109,6 +114,7 @@ Partial Class RegistrationForm
         '
         'nameLabel
         '
+        Me.nameLabel.BackColor = System.Drawing.SystemColors.Window
         Me.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.nameLabel.Location = New System.Drawing.Point(248, 88)
         Me.nameLabel.Name = "nameLabel"
@@ -117,6 +123,7 @@ Partial Class RegistrationForm
         '
         'matricNumberLabel
         '
+        Me.matricNumberLabel.BackColor = System.Drawing.SystemColors.Window
         Me.matricNumberLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.matricNumberLabel.Location = New System.Drawing.Point(248, 48)
         Me.matricNumberLabel.Name = "matricNumberLabel"
@@ -126,7 +133,7 @@ Partial Class RegistrationForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(520, 48)
+        Me.Label3.Location = New System.Drawing.Point(554, 44)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 31)
         Me.Label3.TabIndex = 3
@@ -170,7 +177,7 @@ Partial Class RegistrationForm
         Me.GroupBox2.Controls.Add(Me.SubjectRegisterDataGridView)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 295)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(672, 325)
+        Me.GroupBox2.Size = New System.Drawing.Size(672, 343)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Subject Register"
@@ -198,7 +205,7 @@ Partial Class RegistrationForm
         'DisplaySubjectButton
         '
         Me.DisplaySubjectButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.DisplaySubjectButton.Location = New System.Drawing.Point(48, 216)
+        Me.DisplaySubjectButton.Location = New System.Drawing.Point(21, 213)
         Me.DisplaySubjectButton.Name = "DisplaySubjectButton"
         Me.DisplaySubjectButton.Size = New System.Drawing.Size(211, 53)
         Me.DisplaySubjectButton.TabIndex = 4
@@ -208,7 +215,7 @@ Partial Class RegistrationForm
         'AddSubjectButton
         '
         Me.AddSubjectButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.AddSubjectButton.Location = New System.Drawing.Point(272, 216)
+        Me.AddSubjectButton.Location = New System.Drawing.Point(247, 213)
         Me.AddSubjectButton.Name = "AddSubjectButton"
         Me.AddSubjectButton.Size = New System.Drawing.Size(179, 53)
         Me.AddSubjectButton.TabIndex = 3
@@ -218,7 +225,7 @@ Partial Class RegistrationForm
         'DropButton
         '
         Me.DropButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.DropButton.Location = New System.Drawing.Point(456, 208)
+        Me.DropButton.Location = New System.Drawing.Point(442, 213)
         Me.DropButton.Name = "DropButton"
         Me.DropButton.Size = New System.Drawing.Size(179, 53)
         Me.DropButton.TabIndex = 2
@@ -245,13 +252,14 @@ Partial Class RegistrationForm
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Location = New System.Drawing.Point(704, 295)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(488, 325)
+        Me.GroupBox3.Size = New System.Drawing.Size(488, 343)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Fee Amount"
         '
         'AmountFeeLabel
         '
+        Me.AmountFeeLabel.BackColor = System.Drawing.SystemColors.Window
         Me.AmountFeeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.AmountFeeLabel.Location = New System.Drawing.Point(192, 112)
         Me.AmountFeeLabel.Name = "AmountFeeLabel"
@@ -269,6 +277,7 @@ Partial Class RegistrationForm
         '
         'TotalCreditLabel
         '
+        Me.TotalCreditLabel.BackColor = System.Drawing.SystemColors.Window
         Me.TotalCreditLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TotalCreditLabel.Location = New System.Drawing.Point(192, 64)
         Me.TotalCreditLabel.Name = "TotalCreditLabel"
@@ -284,6 +293,16 @@ Partial Class RegistrationForm
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Total Credit"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(986, 52)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(206, 203)
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
+        '
         'RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(15.0!, 30.0!)
@@ -291,6 +310,7 @@ Partial Class RegistrationForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1205, 669)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -304,6 +324,7 @@ Partial Class RegistrationForm
         CType(Me.SubjectRegisterDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -330,4 +351,5 @@ Partial Class RegistrationForm
     Friend WithEvents Label9 As Label
     Friend WithEvents TotalCreditLabel As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

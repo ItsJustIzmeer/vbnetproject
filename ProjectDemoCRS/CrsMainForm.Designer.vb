@@ -221,6 +221,7 @@ Partial Class CrsMainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Azure
         Me.GroupBox1.Controls.Add(Me.ViewStudentListButton)
         Me.GroupBox1.Controls.Add(Me.StudentListButton)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -259,6 +260,7 @@ Partial Class CrsMainForm
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Azure
         Me.GroupBox2.Controls.Add(Me.TeacherListButton)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(28, 331)
@@ -330,6 +332,7 @@ Partial Class CrsMainForm
         '
         'GroupBox3
         '
+        Me.GroupBox3.BackColor = System.Drawing.Color.Azure
         Me.GroupBox3.Controls.Add(Me.UserListButton)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(341, 331)
@@ -341,6 +344,7 @@ Partial Class CrsMainForm
         '
         'GroupBox4
         '
+        Me.GroupBox4.BackColor = System.Drawing.Color.Azure
         Me.GroupBox4.Controls.Add(Me.SubjectListButton)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(644, 331)
@@ -352,6 +356,7 @@ Partial Class CrsMainForm
         '
         'GroupBox5
         '
+        Me.GroupBox5.BackColor = System.Drawing.Color.Azure
         Me.GroupBox5.Controls.Add(Me.RegisterSubjectButton)
         Me.GroupBox5.Controls.Add(Me.ClassListButton)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

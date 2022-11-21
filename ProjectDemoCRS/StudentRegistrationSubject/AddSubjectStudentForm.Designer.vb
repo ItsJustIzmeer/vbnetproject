@@ -22,6 +22,7 @@ Partial Class AddSubjectStudentForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddSubjectStudentForm))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.creditTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -31,12 +32,15 @@ Partial Class AddSubjectStudentForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.AddUpdateButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox2.Controls.Add(Me.PictureBox1)
         Me.GroupBox2.Controls.Add(Me.creditTextBox)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.subjectCodeTextBox)
@@ -110,7 +114,7 @@ Partial Class AddSubjectStudentForm
         'CancelButton
         '
         Me.CancelButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.CancelButton.Location = New System.Drawing.Point(448, 256)
+        Me.CancelButton.Location = New System.Drawing.Point(326, 244)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(211, 53)
         Me.CancelButton.TabIndex = 5
@@ -120,23 +124,37 @@ Partial Class AddSubjectStudentForm
         'AddUpdateButton
         '
         Me.AddUpdateButton.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.AddUpdateButton.Location = New System.Drawing.Point(232, 256)
+        Me.AddUpdateButton.Location = New System.Drawing.Point(100, 244)
         Me.AddUpdateButton.Name = "AddUpdateButton"
         Me.AddUpdateButton.Size = New System.Drawing.Size(211, 53)
         Me.AddUpdateButton.TabIndex = 4
         Me.AddUpdateButton.Text = "Add"
         Me.AddUpdateButton.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(491, 56)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(168, 147)
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
         'AddSubjectStudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "AddSubjectStudentForm"
         Me.Text = "AddSubjectStudentForm"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -150,4 +168,5 @@ Partial Class AddSubjectStudentForm
     Friend WithEvents Label1 As Label
     Friend WithEvents matricTextBox As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

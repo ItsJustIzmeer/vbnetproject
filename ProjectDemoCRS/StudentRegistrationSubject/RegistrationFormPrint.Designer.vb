@@ -59,7 +59,7 @@ Partial Class RegistrationFormPrint
         'PrintToolStripMenuItem
         '
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(194, 26)
         Me.PrintToolStripMenuItem.Text = "Print"
         '
         'OpenToolStripMenuItem
@@ -72,7 +72,7 @@ Partial Class RegistrationFormPrint
         'DisplaySubjectToolStripMenuItem
         '
         Me.DisplaySubjectToolStripMenuItem.Name = "DisplaySubjectToolStripMenuItem"
-        Me.DisplaySubjectToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DisplaySubjectToolStripMenuItem.Size = New System.Drawing.Size(194, 26)
         Me.DisplaySubjectToolStripMenuItem.Text = "Display Subject"
         '
         'MenuStrip1
@@ -87,11 +87,12 @@ Partial Class RegistrationFormPrint
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(627, 20)
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(628, 54)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(221, 265)
+        Me.PictureBox2.Size = New System.Drawing.Size(221, 215)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
@@ -139,7 +140,7 @@ Partial Class RegistrationFormPrint
         '
         'AmountFeeLabel
         '
-        Me.AmountFeeLabel.BackColor = System.Drawing.Color.Gainsboro
+        Me.AmountFeeLabel.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.AmountFeeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.AmountFeeLabel.Location = New System.Drawing.Point(601, 383)
         Me.AmountFeeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -151,8 +152,8 @@ Partial Class RegistrationFormPrint
         '
         Me.SubjectRegisterDataGridView.AllowUserToResizeRows = False
         Me.SubjectRegisterDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
-        Me.SubjectRegisterDataGridView.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.SubjectRegisterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SubjectRegisterDataGridView.GridColor = System.Drawing.SystemColors.Window
         Me.SubjectRegisterDataGridView.Location = New System.Drawing.Point(27, 50)
         Me.SubjectRegisterDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.SubjectRegisterDataGridView.Name = "SubjectRegisterDataGridView"
@@ -243,7 +244,7 @@ Partial Class RegistrationFormPrint
         '
         'TotalCreditLabel
         '
-        Me.TotalCreditLabel.BackColor = System.Drawing.Color.Gainsboro
+        Me.TotalCreditLabel.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.TotalCreditLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TotalCreditLabel.Location = New System.Drawing.Point(188, 383)
         Me.TotalCreditLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -263,7 +264,7 @@ Partial Class RegistrationFormPrint
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.White
+        Me.GroupBox2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.TotalCreditLabel)
         Me.GroupBox2.Controls.Add(Me.Label7)
@@ -281,7 +282,7 @@ Partial Class RegistrationFormPrint
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.GroupBox1.Controls.Add(Me.PictureBox2)
         Me.GroupBox1.Controls.Add(Me.classLabel)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -323,6 +324,8 @@ Partial Class RegistrationFormPrint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(893, 947)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label5)

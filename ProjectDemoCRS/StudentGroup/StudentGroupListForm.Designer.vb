@@ -33,9 +33,11 @@ Partial Class StudentGroupListForm
         Me.GroupIdButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.StudentGroupDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Search.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StudentGroupDataGridView
@@ -46,7 +48,7 @@ Partial Class StudentGroupListForm
         Me.StudentGroupDataGridView.MultiSelect = False
         Me.StudentGroupDataGridView.Name = "StudentGroupDataGridView"
         Me.StudentGroupDataGridView.RowHeadersWidth = 51
-        Me.StudentGroupDataGridView.Size = New System.Drawing.Size(1178, 416)
+        Me.StudentGroupDataGridView.Size = New System.Drawing.Size(1310, 416)
         Me.StudentGroupDataGridView.TabIndex = 0
         '
         'updateStudentGroupButton
@@ -88,6 +90,7 @@ Partial Class StudentGroupListForm
         'Search
         '
         Me.Search.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Search.Controls.Add(Me.PictureBox2)
         Me.Search.Controls.Add(Me.PictureBox1)
         Me.Search.Controls.Add(Me.displayAllButton)
         Me.Search.Controls.Add(Me.GroupIdButton)
@@ -98,7 +101,7 @@ Partial Class StudentGroupListForm
         Me.Search.Margin = New System.Windows.Forms.Padding(4)
         Me.Search.Name = "Search"
         Me.Search.Padding = New System.Windows.Forms.Padding(4)
-        Me.Search.Size = New System.Drawing.Size(1176, 101)
+        Me.Search.Size = New System.Drawing.Size(1310, 101)
         Me.Search.TabIndex = 14
         Me.Search.TabStop = False
         Me.Search.Text = "Search"
@@ -154,13 +157,24 @@ Partial Class StudentGroupListForm
         Me.searchTextBox.Size = New System.Drawing.Size(392, 37)
         Me.searchTextBox.TabIndex = 0
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(1171, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(132, 82)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
+        '
         'StudentGroupListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1202, 689)
+        Me.ClientSize = New System.Drawing.Size(1339, 689)
         Me.Controls.Add(Me.Search)
         Me.Controls.Add(Me.updateStudentGroupButton)
         Me.Controls.Add(Me.AddStudentGroupButton)
@@ -174,6 +188,7 @@ Partial Class StudentGroupListForm
         Me.Search.ResumeLayout(False)
         Me.Search.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -188,4 +203,5 @@ Partial Class StudentGroupListForm
     Friend WithEvents GroupIdButton As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents searchTextBox As TextBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
