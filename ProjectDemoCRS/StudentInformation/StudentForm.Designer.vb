@@ -22,6 +22,7 @@ Partial Class StudentForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dobDateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.nameTextBox = New System.Windows.Forms.TextBox()
@@ -42,6 +43,7 @@ Partial Class StudentForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.GroupBox1.Controls.Add(Me.dobDateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.nameTextBox)
         Me.GroupBox1.Controls.Add(Me.classComboBox)
@@ -57,11 +59,11 @@ Partial Class StudentForm
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 15)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 18)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
-        Me.GroupBox1.Size = New System.Drawing.Size(682, 504)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(8, 7, 8, 7)
+        Me.GroupBox1.Size = New System.Drawing.Size(909, 620)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Information"
@@ -69,125 +71,143 @@ Partial Class StudentForm
         'dobDateTimePicker1
         '
         Me.dobDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dobDateTimePicker1.Location = New System.Drawing.Point(205, 217)
+        Me.dobDateTimePicker1.Location = New System.Drawing.Point(273, 267)
+        Me.dobDateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dobDateTimePicker1.Name = "dobDateTimePicker1"
-        Me.dobDateTimePicker1.Size = New System.Drawing.Size(260, 31)
+        Me.dobDateTimePicker1.Size = New System.Drawing.Size(345, 37)
         Me.dobDateTimePicker1.TabIndex = 21
         '
         'nameTextBox
         '
-        Me.nameTextBox.Location = New System.Drawing.Point(203, 155)
+        Me.nameTextBox.Location = New System.Drawing.Point(271, 191)
+        Me.nameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nameTextBox.Name = "nameTextBox"
-        Me.nameTextBox.Size = New System.Drawing.Size(262, 31)
+        Me.nameTextBox.Size = New System.Drawing.Size(348, 37)
         Me.nameTextBox.TabIndex = 20
         '
         'classComboBox
         '
         Me.classComboBox.FormattingEnabled = True
-        Me.classComboBox.Location = New System.Drawing.Point(203, 314)
+        Me.classComboBox.Location = New System.Drawing.Point(271, 386)
+        Me.classComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.classComboBox.Name = "classComboBox"
-        Me.classComboBox.Size = New System.Drawing.Size(262, 33)
+        Me.classComboBox.Size = New System.Drawing.Size(348, 38)
         Me.classComboBox.TabIndex = 19
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 314)
+        Me.Label7.Location = New System.Drawing.Point(12, 386)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(66, 25)
+        Me.Label7.Size = New System.Drawing.Size(83, 31)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Class"
         '
         'PhoneNumberTextBox
         '
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(203, 264)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(271, 325)
+        Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(262, 31)
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(348, 37)
         Me.PhoneNumberTextBox.TabIndex = 16
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 264)
+        Me.Label6.Location = New System.Drawing.Point(12, 325)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(155, 25)
+        Me.Label6.Size = New System.Drawing.Size(195, 31)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Phone Number"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 212)
+        Me.Label5.Location = New System.Drawing.Point(12, 261)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(129, 25)
+        Me.Label5.Size = New System.Drawing.Size(162, 31)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Date of birth"
         '
         'CancelButton
         '
-        Me.CancelButton.Location = New System.Drawing.Point(293, 418)
+        Me.CancelButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.CancelButton.Location = New System.Drawing.Point(391, 514)
+        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(117, 45)
+        Me.CancelButton.Size = New System.Drawing.Size(156, 55)
         Me.CancelButton.TabIndex = 7
         Me.CancelButton.Text = "Cancel"
-        Me.CancelButton.UseVisualStyleBackColor = True
+        Me.CancelButton.UseVisualStyleBackColor = False
         '
         'AddUpdateButton
         '
-        Me.AddUpdateButton.Location = New System.Drawing.Point(146, 418)
+        Me.AddUpdateButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.AddUpdateButton.Location = New System.Drawing.Point(195, 514)
+        Me.AddUpdateButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AddUpdateButton.Name = "AddUpdateButton"
-        Me.AddUpdateButton.Size = New System.Drawing.Size(117, 45)
+        Me.AddUpdateButton.Size = New System.Drawing.Size(156, 55)
         Me.AddUpdateButton.TabIndex = 6
         Me.AddUpdateButton.Text = "Button1"
-        Me.AddUpdateButton.UseVisualStyleBackColor = True
+        Me.AddUpdateButton.UseVisualStyleBackColor = False
         '
         'icNumberTextBox
         '
-        Me.icNumberTextBox.Location = New System.Drawing.Point(203, 108)
+        Me.icNumberTextBox.Location = New System.Drawing.Point(271, 133)
+        Me.icNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.icNumberTextBox.Name = "icNumberTextBox"
-        Me.icNumberTextBox.Size = New System.Drawing.Size(262, 31)
+        Me.icNumberTextBox.Size = New System.Drawing.Size(348, 37)
         Me.icNumberTextBox.TabIndex = 4
         '
         'matricTextBox
         '
-        Me.matricTextBox.Location = New System.Drawing.Point(206, 57)
+        Me.matricTextBox.Location = New System.Drawing.Point(275, 70)
+        Me.matricTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.matricTextBox.Name = "matricTextBox"
-        Me.matricTextBox.Size = New System.Drawing.Size(259, 31)
+        Me.matricTextBox.Size = New System.Drawing.Size(344, 37)
         Me.matricTextBox.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 158)
+        Me.Label3.Location = New System.Drawing.Point(12, 194)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 25)
+        Me.Label3.Size = New System.Drawing.Size(86, 31)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 108)
+        Me.Label2.Location = New System.Drawing.Point(12, 133)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 25)
+        Me.Label2.Size = New System.Drawing.Size(139, 31)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Ic Number"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 60)
+        Me.Label1.Location = New System.Drawing.Point(12, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(152, 25)
+        Me.Label1.Size = New System.Drawing.Size(191, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Matric Number"
         '
         'StudentForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(712, 532)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(949, 655)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "StudentForm"
         Me.Text = "StudentForm"
         Me.GroupBox1.ResumeLayout(False)

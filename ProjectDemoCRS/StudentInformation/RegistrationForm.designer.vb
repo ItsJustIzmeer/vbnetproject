@@ -22,6 +22,7 @@ Partial Class RegistrationForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegistrationForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.courseLabel = New System.Windows.Forms.Label()
         Me.statusLabel = New System.Windows.Forms.Label()
@@ -32,11 +33,11 @@ Partial Class RegistrationForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.SubjectCodeTextBox = New System.Windows.Forms.TextBox()
         Me.AddSubjectButton = New System.Windows.Forms.Button()
         Me.DropButton = New System.Windows.Forms.Button()
         Me.SubjectRegisterDataGridView = New System.Windows.Forms.DataGridView()
-        Me.SubjectCodeTextBox = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.SubjectRegisterDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +45,7 @@ Partial Class RegistrationForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.GroupBox1.Controls.Add(Me.courseLabel)
         Me.GroupBox1.Controls.Add(Me.statusLabel)
         Me.GroupBox1.Controls.Add(Me.nameLabel)
@@ -98,7 +100,7 @@ Partial Class RegistrationForm
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(35, 161)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(81, 25)
+        Me.Label3.Size = New System.Drawing.Size(102, 31)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Course"
         '
@@ -107,7 +109,7 @@ Partial Class RegistrationForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(35, 121)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 25)
+        Me.Label4.Size = New System.Drawing.Size(92, 31)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Status"
         '
@@ -116,7 +118,7 @@ Partial Class RegistrationForm
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(35, 84)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 25)
+        Me.Label2.Size = New System.Drawing.Size(86, 31)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Name"
         '
@@ -125,12 +127,13 @@ Partial Class RegistrationForm
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(35, 44)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(152, 25)
+        Me.Label1.Size = New System.Drawing.Size(191, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Matric Number"
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.SubjectCodeTextBox)
         Me.GroupBox2.Controls.Add(Me.AddSubjectButton)
@@ -143,23 +146,41 @@ Partial Class RegistrationForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Subject Register"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(596, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(334, 31)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Enter Subject Code to Add"
+        '
+        'SubjectCodeTextBox
+        '
+        Me.SubjectCodeTextBox.Location = New System.Drawing.Point(645, 50)
+        Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
+        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(175, 37)
+        Me.SubjectCodeTextBox.TabIndex = 4
+        '
         'AddSubjectButton
         '
+        Me.AddSubjectButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.AddSubjectButton.Location = New System.Drawing.Point(645, 88)
         Me.AddSubjectButton.Name = "AddSubjectButton"
         Me.AddSubjectButton.Size = New System.Drawing.Size(179, 53)
         Me.AddSubjectButton.TabIndex = 3
         Me.AddSubjectButton.Text = "Add Subject"
-        Me.AddSubjectButton.UseVisualStyleBackColor = True
+        Me.AddSubjectButton.UseVisualStyleBackColor = False
         '
         'DropButton
         '
+        Me.DropButton.BackColor = System.Drawing.Color.LightSteelBlue
         Me.DropButton.Location = New System.Drawing.Point(645, 147)
         Me.DropButton.Name = "DropButton"
         Me.DropButton.Size = New System.Drawing.Size(179, 53)
         Me.DropButton.TabIndex = 2
         Me.DropButton.Text = "Drop Subject"
-        Me.DropButton.UseVisualStyleBackColor = True
+        Me.DropButton.UseVisualStyleBackColor = False
         '
         'SubjectRegisterDataGridView
         '
@@ -168,29 +189,16 @@ Partial Class RegistrationForm
         Me.SubjectRegisterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SubjectRegisterDataGridView.Location = New System.Drawing.Point(21, 50)
         Me.SubjectRegisterDataGridView.Name = "SubjectRegisterDataGridView"
+        Me.SubjectRegisterDataGridView.RowHeadersWidth = 51
         Me.SubjectRegisterDataGridView.Size = New System.Drawing.Size(600, 150)
         Me.SubjectRegisterDataGridView.TabIndex = 0
         '
-        'SubjectCodeTextBox
-        '
-        Me.SubjectCodeTextBox.Location = New System.Drawing.Point(645, 50)
-        Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
-        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(175, 31)
-        Me.SubjectCodeTextBox.TabIndex = 4
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(596, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(266, 25)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Enter Subject Code to Add"
-        '
         'RegistrationForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(15.0!, 30.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1205, 669)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

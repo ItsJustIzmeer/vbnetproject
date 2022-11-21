@@ -22,8 +22,12 @@ Partial Class StudentGroupForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentGroupForm))
         Me.AddUpdateButton = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.secondaryRadioButton = New System.Windows.Forms.RadioButton()
+        Me.primaryRadioButton = New System.Windows.Forms.RadioButton()
         Me.noOfStudentTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CancelButton = New System.Windows.Forms.Button()
@@ -32,24 +36,27 @@ Partial Class StudentGroupForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.secondaryRadioButton = New System.Windows.Forms.RadioButton()
-        Me.primaryRadioButton = New System.Windows.Forms.RadioButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AddUpdateButton
         '
-        Me.AddUpdateButton.Location = New System.Drawing.Point(149, 351)
+        Me.AddUpdateButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.AddUpdateButton.Location = New System.Drawing.Point(389, 432)
+        Me.AddUpdateButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AddUpdateButton.Name = "AddUpdateButton"
-        Me.AddUpdateButton.Size = New System.Drawing.Size(117, 45)
+        Me.AddUpdateButton.Size = New System.Drawing.Size(156, 55)
         Me.AddUpdateButton.TabIndex = 6
         Me.AddUpdateButton.Text = "Button1"
-        Me.AddUpdateButton.UseVisualStyleBackColor = True
+        Me.AddUpdateButton.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.noOfStudentTextBox)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -61,100 +68,34 @@ Partial Class StudentGroupForm
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(71, 35)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6)
+        Me.GroupBox1.Location = New System.Drawing.Point(95, 43)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6)
-        Me.GroupBox1.Size = New System.Drawing.Size(682, 504)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(8, 7, 8, 7)
+        Me.GroupBox1.Size = New System.Drawing.Size(1122, 620)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Group Information"
-        '
-        'noOfStudentTextBox
-        '
-        Me.noOfStudentTextBox.Location = New System.Drawing.Point(199, 271)
-        Me.noOfStudentTextBox.Name = "noOfStudentTextBox"
-        Me.noOfStudentTextBox.Size = New System.Drawing.Size(259, 31)
-        Me.noOfStudentTextBox.TabIndex = 9
-        Me.noOfStudentTextBox.Text = "10"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 271)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(184, 25)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Maximum Student"
-        '
-        'CancelButton
-        '
-        Me.CancelButton.Location = New System.Drawing.Point(294, 351)
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(117, 45)
-        Me.CancelButton.TabIndex = 7
-        Me.CancelButton.Text = "Cancel"
-        Me.CancelButton.UseVisualStyleBackColor = True
-        '
-        'groupNameTextBox
-        '
-        Me.groupNameTextBox.Location = New System.Drawing.Point(203, 108)
-        Me.groupNameTextBox.Name = "groupNameTextBox"
-        Me.groupNameTextBox.Size = New System.Drawing.Size(262, 31)
-        Me.groupNameTextBox.TabIndex = 4
-        Me.groupNameTextBox.Text = "3 BIRU"
-        '
-        'groupIdTextBox
-        '
-        Me.groupIdTextBox.Location = New System.Drawing.Point(206, 57)
-        Me.groupIdTextBox.Name = "groupIdTextBox"
-        Me.groupIdTextBox.Size = New System.Drawing.Size(259, 31)
-        Me.groupIdTextBox.TabIndex = 3
-        Me.groupIdTextBox.Text = "P3_BIRU"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 158)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 25)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Level"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 108)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 25)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Group Name"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 60)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Group Id"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.secondaryRadioButton)
         Me.GroupBox2.Controls.Add(Me.primaryRadioButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(199, 145)
+        Me.GroupBox2.Location = New System.Drawing.Point(265, 178)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(326, 78)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(435, 96)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         '
         'secondaryRadioButton
         '
         Me.secondaryRadioButton.AutoSize = True
-        Me.secondaryRadioButton.Location = New System.Drawing.Point(170, 30)
+        Me.secondaryRadioButton.Location = New System.Drawing.Point(227, 37)
+        Me.secondaryRadioButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.secondaryRadioButton.Name = "secondaryRadioButton"
-        Me.secondaryRadioButton.Size = New System.Drawing.Size(133, 29)
+        Me.secondaryRadioButton.Size = New System.Drawing.Size(165, 35)
         Me.secondaryRadioButton.TabIndex = 13
         Me.secondaryRadioButton.TabStop = True
         Me.secondaryRadioButton.Text = "Secondary"
@@ -164,26 +105,120 @@ Partial Class StudentGroupForm
         '
         Me.primaryRadioButton.AutoSize = True
         Me.primaryRadioButton.Checked = True
-        Me.primaryRadioButton.Location = New System.Drawing.Point(36, 30)
+        Me.primaryRadioButton.Location = New System.Drawing.Point(48, 37)
+        Me.primaryRadioButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.primaryRadioButton.Name = "primaryRadioButton"
-        Me.primaryRadioButton.Size = New System.Drawing.Size(103, 29)
+        Me.primaryRadioButton.Size = New System.Drawing.Size(128, 35)
         Me.primaryRadioButton.TabIndex = 12
         Me.primaryRadioButton.TabStop = True
         Me.primaryRadioButton.Text = "Primary"
         Me.primaryRadioButton.UseVisualStyleBackColor = True
         '
+        'noOfStudentTextBox
+        '
+        Me.noOfStudentTextBox.Location = New System.Drawing.Point(265, 334)
+        Me.noOfStudentTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.noOfStudentTextBox.Name = "noOfStudentTextBox"
+        Me.noOfStudentTextBox.Size = New System.Drawing.Size(344, 37)
+        Me.noOfStudentTextBox.TabIndex = 9
+        Me.noOfStudentTextBox.Text = "10"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 334)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(230, 31)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Maximum Student"
+        '
+        'CancelButton
+        '
+        Me.CancelButton.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.CancelButton.Location = New System.Drawing.Point(581, 432)
+        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(156, 55)
+        Me.CancelButton.TabIndex = 7
+        Me.CancelButton.Text = "Cancel"
+        Me.CancelButton.UseVisualStyleBackColor = False
+        '
+        'groupNameTextBox
+        '
+        Me.groupNameTextBox.Location = New System.Drawing.Point(271, 133)
+        Me.groupNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupNameTextBox.Name = "groupNameTextBox"
+        Me.groupNameTextBox.Size = New System.Drawing.Size(348, 37)
+        Me.groupNameTextBox.TabIndex = 4
+        Me.groupNameTextBox.Text = "3 BIRU"
+        '
+        'groupIdTextBox
+        '
+        Me.groupIdTextBox.Location = New System.Drawing.Point(275, 70)
+        Me.groupIdTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupIdTextBox.Name = "groupIdTextBox"
+        Me.groupIdTextBox.Size = New System.Drawing.Size(344, 37)
+        Me.groupIdTextBox.TabIndex = 3
+        Me.groupIdTextBox.Text = "P3_BIRU"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 194)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(79, 31)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Level"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 133)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(168, 31)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Group Name"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(119, 31)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Group Id"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(759, 31)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(336, 305)
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
         'StudentGroupForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(845, 615)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1274, 683)
         Me.Controls.Add(Me.GroupBox1)
+        Me.DoubleBuffered = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "StudentGroupForm"
         Me.Text = "StudentGroupForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -201,4 +236,5 @@ Partial Class StudentGroupForm
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents secondaryRadioButton As RadioButton
     Friend WithEvents primaryRadioButton As RadioButton
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

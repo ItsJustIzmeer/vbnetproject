@@ -24,4 +24,8 @@ Public Class LoginForm
         user = New UserClass()
         loginModel = New LoginModel
     End Sub
+
+    Private Sub PasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles PasswordTextBox.TextChanged
+
+    End Sub
 End Class
