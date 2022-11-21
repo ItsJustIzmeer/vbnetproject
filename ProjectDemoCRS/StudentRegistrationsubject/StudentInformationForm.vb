@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+Imports System.Data.OleDb
 Public Class StudentInformationForm
     Public conn As New OleDb.OleDbConnection
     Public connTest As New OleDb.OleDbConnection

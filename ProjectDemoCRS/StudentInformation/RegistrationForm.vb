@@ -30,12 +30,14 @@ Public Class RegistrationForm
         While dr.Read()
             With Me
                 .matricNumberLabel.Text = dr("matricNumber").ToString
+                .icLabel.Text = dr("icNumber").ToString
                 .nameLabel.Text = dr("name").ToString
+                .PhoneNumberLabel.Text = dr("phoneNumber").ToString
                 '.statusLabel.Text = dr("status").ToString
-                .courseLabel.Text = dr("course").ToString
+                .classLabel.Text = dr("groupId").ToString
             End With
         End While
-        'conn.Close()
+        conn.Close()
     End Sub
     Private Sub displaySubjectRegister(matricString As String)
         clearSubjectRegisterGrid()
@@ -52,52 +54,45 @@ Public Class RegistrationForm
         SubjectRegisterDataGridView.DataSource = ds
     End Sub
     Private Sub openConnection()
-
-
-        'conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
-
+        conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
         Try
             'opens the connection
-            If conn.State <> ConnectionState.Open Then
-                conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
-                conn.Open()
-                MsgBox("MS Database Connected!")
+            conn.Open()
+            If conn.State = ConnectionState.Open Then
+                '      MsgBox("MS Database Connected!")
+                Exit Sub
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            '   MsgBox(ex.Message)
         End Try
         'close the connection
-        ' conn.Close()
+        conn.Close()
     End Sub
     Private Sub clearSubjectRegisterGrid()
         Me.ds.Clear() 'clear the original data
         Me.DropButton.Enabled = False
     End Sub
 
-    Private Sub displaySubjectButton_Click(sender As Object, e As EventArgs)
-        ' displaySubjectRegister(mId)
-    End Sub
-
     Private Sub SubjectRegisterDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles SubjectRegisterDataGridView.CellClick
         Dim cb As New OleDb.OleDbCommandBuilder(dataAdapter)
-        Dim dataRow As DataRow
-        Dim row, col, noOfRec As Integer
-
-        noOfRec = SubjectRegisterDataGridView.Rows.Count
-        col = SubjectRegisterDataGridView.CurrentCell.ColumnIndex
-        row = SubjectRegisterDataGridView.CurrentCell.RowIndex
-        If col = 0 And row < noOfRec - 1 Then ' allow subjectCode selection only
+        Dim col, inc As Integer
+        Try
+            col = SubjectRegisterDataGridView.CurrentCell.ColumnIndex
+            If col <> 0 Then
+                Me.DropButton.Enabled = True
+                Exit Sub
+            End If
+            inc = SubjectRegisterDataGridView.CurrentCell.RowIndex
             msubjectCodeString = SubjectRegisterDataGridView.CurrentCell.Value
-        Else
-            msubjectCodeString = ""
-        End If
+            If (msubjectCodeString <> "") Then
+                Me.DropButton.Enabled = True
+            Else
+                Me.DropButton.Enabled = False
+            End If
 
-
-        If (msubjectCodeString <> "") Then
-            Me.DropButton.Enabled = True
-        Else
-            Me.DropButton.Enabled = False
-        End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
     Private Sub DropButton_Click(sender As Object, e As EventArgs) Handles DropButton.Click
@@ -108,12 +103,8 @@ Public Class RegistrationForm
             dialogResult = MessageBox.Show(messageString, "Confirm Drop", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If dialogResult = MsgBoxResult.Ok Then
                 'deletedOK = mySubject.dropStudentSubject(mId, msubjectCodeString)
-
-
                 deletedOK = mySubject.dropSubject(mId, msubjectCodeString)
-
-
-
+                MsgBox("Drop " & msubjectCodeString & " succesfully !")
                 displaySubjectRegister(mId)
             End If
         End If
@@ -124,15 +115,37 @@ Public Class RegistrationForm
     End Sub
 
     Private Sub AddSubjectButton_Click(sender As Object, e As EventArgs) Handles AddSubjectButton.Click
-        Dim subjectCodeToRegister, currentStudentMatric As String
-        subjectCodeToRegister = SubjectCodeTextBox.Text
-        currentStudentMatric = mId
-        mySubject.RegisterSubjectForThisStudent(subjectCodeToRegister, currentStudentMatric)
+        'subjectCodeToRegister = SubjectCodeTextBox.Text
+        AddSubjectStudentForm.prepareToAddNewSubject()
+        AddSubjectStudentForm.ShowDialog()
         displaySubjectRegister(mId)
+    End Sub
+
+    Private Sub PrintButton_Click(sender As Object, e As EventArgs) Handles PrintButton.Click
+        SendEmailForm.ShowDialog()
+    End Sub
+    Private Sub RefreshForm()
+        Me.Controls.Clear()
+        Me.InitializeComponent()
+    End Sub
+
+    Private Sub DisplaySubjectButton_Click(sender As Object, e As EventArgs) Handles DisplaySubjectButton.Click
+        displaySubjectRegister(mId)
+        Dim totalCreditDouble As Double
+        If SubjectRegisterDataGridView.RowCount > 1 Then
+            Dim totalCredit As Decimal = 0
+            For index As Integer = 0 To SubjectRegisterDataGridView.RowCount - 1
+                totalCredit += Convert.ToDecimal(SubjectRegisterDataGridView.Rows(index).Cells(2).Value)
+
+
+            Next
+            TotalCreditLabel.Text = totalCredit
+            totalCreditDouble = 50 * totalCredit
+            AmountFeeLabel.Text = totalCreditDouble.ToString("C")
+        End If
     End Sub
 
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         openConnection()
-
     End Sub
 End Class

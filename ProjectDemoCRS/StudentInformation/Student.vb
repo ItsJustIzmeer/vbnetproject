@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Friend Structure StudentRecord
-    Dim matric, ic, name, email, phone, classGroup As String
+    Dim matric, ic, name, email, phone, gender, address, city, poscode, schoolLevel, classGroup As String
     Dim dob As Date
 End Structure
 Public Class Student
@@ -24,9 +24,16 @@ Public Class Student
                 studentRec.ic = dr("icNumber").ToString
                 studentRec.matric = dr("matricNumber").ToString
                 studentRec.name = dr("name").ToString
+                studentRec.gender = dr("gender").ToString
                 studentRec.phone = dr("phoneNumber").ToString
                 studentRec.classGroup = dr("groupId").ToString
                 studentRec.dob = dr("dateOfBirth")
+                studentRec.address = dr("address1").ToString
+                studentRec.city = dr("city").ToString
+                studentRec.poscode = dr("poscode").ToString
+                studentRec.email = dr("email").ToString
+                studentRec.schoolLevel = dr("schoolLevel").ToString
+
                 con.Close()
                 Return studentRec
             End If
@@ -40,7 +47,6 @@ Public Class Student
     Friend Function addStudent(newStudentRec As StudentRecord) As Boolean
         Try
             Dim sql As String
-            ''Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\registrationdb.accdb")
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
             If con.State = ConnectionState.Open Then
@@ -49,9 +55,8 @@ Public Class Student
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into student(matricNumber,icNumber,name,dateOfBirth,phoneNumber,groupId)"
-            sql = sql & " values('" & newStudentRec.matric & "','" & newStudentRec.ic & "','" & newStudentRec.name & "','" & newStudentRec.dob & "','" & newStudentRec.phone & "','" & newStudentRec.classGroup & "')"
-            'insert into student(matricNumber,icNumber,name,dateOfBirth,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
+            sql = "insert into student(matricNumber,icNumber,name,dateOfBirth,phoneNumber,groupId,gender,address1,city,poscode,email,schoolLevel)"
+            sql = sql & " values('" & newStudentRec.matric & "','" & newStudentRec.ic & "','" & newStudentRec.name & "','" & newStudentRec.dob & "','" & newStudentRec.phone & "','" & newStudentRec.classGroup & "','" & newStudentRec.gender & "','" & newStudentRec.address & "','" & newStudentRec.city & "','" & newStudentRec.poscode & "','" & newStudentRec.email & "','" & newStudentRec.schoolLevel & "')"
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
             Dim cmd As New OleDbCommand(sql, con)
@@ -78,7 +83,13 @@ Public Class Student
             sql = sql & " name ='" & newStudentRec.name & "',"
             sql = sql & " dateOfBirth ='" & newStudentRec.dob & "',"
             sql = sql & " phoneNumber ='" & newStudentRec.phone & "',"
-            sql = sql & " groupId ='" & newStudentRec.classGroup & "'"
+            sql = sql & " groupId ='" & newStudentRec.classGroup & "',"
+            sql = sql & " gender ='" & newStudentRec.gender & "',"
+            sql = sql & " address1 ='" & newStudentRec.address & "',"
+            sql = sql & " city ='" & newStudentRec.city & "',"
+            sql = sql & " poscode ='" & newStudentRec.poscode & "',"
+            sql = sql & " email ='" & newStudentRec.email & "',"
+            sql = sql & " schoolLevel ='" & newStudentRec.schoolLevel & "'"
             sql = sql & " where matricNumber ='" & oldStudentRec.matric & "'"
             'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)

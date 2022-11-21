@@ -45,7 +45,6 @@
             .AddStudentButton.Enabled = False
             .updateStudentButton.Enabled = False
             .DeleteStudentButton.Enabled = False
-            .RegistrationButton.Enabled = False
         End With
     End Sub
     Private Sub enableButton()
@@ -53,7 +52,6 @@
             .AddStudentButton.Enabled = True
             .updateStudentButton.Enabled = True
             .DeleteStudentButton.Enabled = True
-            .RegistrationButton.Enabled = True
         End With
     End Sub
     Private Sub AddStudentButton_Click(sender As Object, e As EventArgs) Handles AddStudentButton.Click

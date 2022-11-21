@@ -4,7 +4,6 @@
     ' Dim theStudentGroupRecord As StudentGroupRecord
     Dim OldStudentRec As StudentRecord
 
-
     Friend Sub prepareToUpdateStudent(studentMatric As String)
         'MessageBox.Show("to update student with matric" & studentMatric)
         With Me
@@ -20,12 +19,15 @@
                 .icNumberTextBox.Text = OldStudentRec.ic
                 .matricTextBox.Text = OldStudentRec.matric
                 .nameTextBox.Text = OldStudentRec.name
-                'MessageBox.Show(OldStudentRec.dob.Date.ToString)
-                'displayLevel(OldStudentGroupRec.groupLevel) 'to check suitable radio button
-                '.dobDateTimePicker1.CustomFormat = "dd-MM-yyyy"
-                .dobDateTimePicker1.Value = OldStudentRec.dob.Date
+                displayLevel(OldStudentRec.gender)
                 .PhoneNumberTextBox.Text = OldStudentRec.phone
                 .classComboBox.Text = OldStudentRec.classGroup
+                .dobDateTimePicker1.Value = OldStudentRec.dob.Date
+                .Address1TextBox.Text = OldStudentRec.address
+                .CityTextBox.Text = OldStudentRec.city
+                .PoscodeTextBox.Text = OldStudentRec.poscode
+                .EmailTextBox.Text = OldStudentRec.email
+                .SchoolLevelTextBox.Text = OldStudentRec.schoolLevel
 
             End With
         Catch ex As Exception
@@ -71,9 +73,15 @@
             .ic = icNumberTextBox.Text
             .matric = matricTextBox.Text
             .name = nameTextBox.Text
-            .dob = dobDateTimePicker1.Value
+            .gender = getLevelFromRadioButton()
             .phone = PhoneNumberTextBox.Text
             .classGroup = classComboBox.Text
+            .dob = dobDateTimePicker1.Value
+            .address = Address1TextBox.Text
+            .city = CityTextBox.Text
+            .poscode = PoscodeTextBox.Text
+            .email = EmailTextBox.Text
+            .schoolLevel = SchoolLevelTextBox.Text
         End With
 
         addOk = myStudent.addStudent(theNewStudentRec)
@@ -88,8 +96,16 @@
             .matricTextBox.Clear()
             .icNumberTextBox.Clear()
             .nameTextBox.Clear()
-
+            .dobDateTimePicker1.Value = DateTime.Today
             .classComboBox.Text = ""
+            .PhoneNumberTextBox.Clear()
+            .Address1TextBox.Clear()
+            .CityTextBox.Clear()
+            .PoscodeTextBox.Clear()
+            .EmailTextBox.Clear()
+            .SchoolLevelTextBox.Clear()
+            .FemaleRadioButton.Checked = False
+            .MaleRadioButton.Checked = False
         End With
     End Sub
 
@@ -103,9 +119,15 @@
         theNewStudentRec.matric = matricTextBox.Text
         theNewStudentRec.ic = icNumberTextBox.Text
         theNewStudentRec.name = nameTextBox.Text
+        theNewStudentRec.gender = getLevelFromRadioButton()
         theNewStudentRec.dob = dobDateTimePicker1.Value
         theNewStudentRec.phone = PhoneNumberTextBox.Text
         theNewStudentRec.classGroup = classComboBox.Text
+        theNewStudentRec.address = Address1TextBox.Text
+        theNewStudentRec.city = CityTextBox.Text
+        theNewStudentRec.poscode = PoscodeTextBox.Text
+        theNewStudentRec.email = EmailTextBox.Text
+        theNewStudentRec.schoolLevel = SchoolLevelTextBox.Text
         updateOk = myStudent.updateThisStudent(oldStudentRec, theNewStudentRec)
         If updateOk Then
             messageString = "Student with matric : " & theNewStudentRec.matric & " has been updated"
@@ -119,5 +141,19 @@
         'MessageBox.Show(dobDateTimePicker1.Value.ToShortDateString)
 
     End Sub
+    Private Function getLevelFromRadioButton() As String
+        If MaleRadioButton.Checked Then
+            Return "MALE"
+        Else
+            Return "FEMALE"
+        End If
+    End Function
+    Private Sub displayLevel(level As String)
+        If level = "MALE" Or level = "Male" Then
+            MaleRadioButton.Checked = True
+        Else
+            FemaleRadioButton.Checked = True
+        End If
 
+    End Sub
 End Class

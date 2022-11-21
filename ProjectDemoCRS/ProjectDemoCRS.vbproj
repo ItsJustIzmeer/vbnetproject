@@ -157,6 +157,25 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentInformation\Subject.vb" />
+    <Compile Include="StudentRegistrationSubject\AddSubjectStudentForm.Designer.vb">
+      <DependentUpon>AddSubjectStudentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationSubject\AddSubjectStudentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationSubject\RegisterSubject.vb" />
+    <Compile Include="StudentRegistrationSubject\RegistrationFormPrint.Designer.vb">
+      <DependentUpon>RegistrationFormPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationSubject\RegistrationFormPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationSubject\SendEmailForm.Designer.vb">
+      <DependentUpon>SendEmailForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationSubject\SendEmailForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StudentRegistrationSubject\StudentInformationForm.Designer.vb">
       <DependentUpon>StudentInformationForm.vb</DependentUpon>
     </Compile>
@@ -238,6 +257,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInformation\StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistrationSubject\AddSubjectStudentForm.resx">
+      <DependentUpon>AddSubjectStudentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistrationSubject\RegistrationFormPrint.resx">
+      <DependentUpon>RegistrationFormPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistrationSubject\SendEmailForm.resx">
+      <DependentUpon>SendEmailForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentRegistrationSubject\StudentInformationForm.resx">
       <DependentUpon>StudentInformationForm.vb</DependentUpon>

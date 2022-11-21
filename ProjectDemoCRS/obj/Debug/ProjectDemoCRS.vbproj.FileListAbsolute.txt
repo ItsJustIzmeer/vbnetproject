@@ -133,3 +133,6 @@ C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCR
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListSubjectCodeForm.resources
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentViewListForm.resources
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.RegistrationFormPrint.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.AddSubjectStudentForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SendEmailForm.resources

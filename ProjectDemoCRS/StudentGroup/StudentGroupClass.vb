@@ -26,7 +26,7 @@ Public Class StudentGroupClass
             con.Close()
         Catch ex As Exception
 
-            MessageBox.Show("Error adding new student group record. Message:" & ex.ToString)
+            MessageBox.Show("Error adding new student class record. Message:" & ex.ToString)
         End Try
         Return True
 
@@ -54,7 +54,7 @@ Public Class StudentGroupClass
                 Return studentGroupRec
             End If
         Catch
-            MessageBox.Show("Error accessing student group")
+            MessageBox.Show("Error accessing class list")
             con.Close()
             Return studentGroupRec
         End Try
