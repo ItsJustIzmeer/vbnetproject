@@ -19,7 +19,7 @@ Public Class StudentGroupListForm
             'opens the connection
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                MsgBox("MS Database Connected!")
+                'MsgBox("MS Database Connected!")
                 displayAllStudentGroup()
             End If
         Catch ex As Exception

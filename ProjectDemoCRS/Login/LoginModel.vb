@@ -6,12 +6,14 @@ Public Class LoginModel
         Dim sql As String
         con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
         con.Open()
-        sql = "Select * FROM userTbl WHERE userName='" & user.userName & "' AND password='" & user.password & "'"
+        sql = "Select * FROM userTbl WHERE luserName='" & user.userName & "' AND lpassword='" & user.password & "'"
 
         Dim cmd1 As New OleDbCommand(sql, con)
         dr = cmd1.ExecuteReader()
+
         If dr.Read Then
-            con.Close()
+            'userLevel = dr("userlevel").ToString
+            'Debug.WriteLine(userLevel)
             Return True
         End If
         con.Close()

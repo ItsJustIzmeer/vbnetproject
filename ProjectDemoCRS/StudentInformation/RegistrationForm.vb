@@ -122,7 +122,7 @@ Public Class RegistrationForm
     End Sub
 
     Private Sub PrintButton_Click(sender As Object, e As EventArgs) Handles PrintButton.Click
-        SendEmailForm.ShowDialog()
+
     End Sub
     Private Sub RefreshForm()
         Me.Controls.Clear()
@@ -143,6 +143,10 @@ Public Class RegistrationForm
             totalCreditDouble = 50 * totalCredit
             AmountFeeLabel.Text = totalCreditDouble.ToString("C")
         End If
+    End Sub
+
+    Private Sub EmailButton_Click(sender As Object, e As EventArgs) Handles EmailButton.Click
+        SendEmailForm.ShowDialog()
     End Sub
 
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles Me.Load

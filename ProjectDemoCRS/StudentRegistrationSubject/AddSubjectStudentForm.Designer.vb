@@ -24,6 +24,7 @@ Partial Class AddSubjectStudentForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddSubjectStudentForm))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.creditTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.subjectCodeTextBox = New System.Windows.Forms.TextBox()
@@ -32,7 +33,6 @@ Partial Class AddSubjectStudentForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.AddUpdateButton = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,12 +57,22 @@ Partial Class AddSubjectStudentForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Subject Information"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(491, 56)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(168, 147)
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
         'creditTextBox
         '
         Me.creditTextBox.Location = New System.Drawing.Point(228, 144)
         Me.creditTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.creditTextBox.Name = "creditTextBox"
-        Me.creditTextBox.Size = New System.Drawing.Size(232, 30)
+        Me.creditTextBox.Size = New System.Drawing.Size(232, 26)
         Me.creditTextBox.TabIndex = 14
         '
         'Label3
@@ -71,7 +81,7 @@ Partial Class AddSubjectStudentForm
         Me.Label3.Location = New System.Drawing.Point(56, 144)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 25)
+        Me.Label3.Size = New System.Drawing.Size(51, 20)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Credit"
         '
@@ -80,7 +90,7 @@ Partial Class AddSubjectStudentForm
         Me.subjectCodeTextBox.Location = New System.Drawing.Point(228, 96)
         Me.subjectCodeTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.subjectCodeTextBox.Name = "subjectCodeTextBox"
-        Me.subjectCodeTextBox.Size = New System.Drawing.Size(232, 30)
+        Me.subjectCodeTextBox.Size = New System.Drawing.Size(232, 26)
         Me.subjectCodeTextBox.TabIndex = 12
         '
         'Label1
@@ -89,7 +99,7 @@ Partial Class AddSubjectStudentForm
         Me.Label1.Location = New System.Drawing.Point(56, 96)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 25)
+        Me.Label1.Size = New System.Drawing.Size(105, 20)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Subject Code"
         '
@@ -98,7 +108,7 @@ Partial Class AddSubjectStudentForm
         Me.matricTextBox.Location = New System.Drawing.Point(228, 56)
         Me.matricTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.matricTextBox.Name = "matricTextBox"
-        Me.matricTextBox.Size = New System.Drawing.Size(232, 30)
+        Me.matricTextBox.Size = New System.Drawing.Size(232, 26)
         Me.matricTextBox.TabIndex = 10
         '
         'Label2
@@ -107,7 +117,7 @@ Partial Class AddSubjectStudentForm
         Me.Label2.Location = New System.Drawing.Point(56, 56)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 25)
+        Me.Label2.Size = New System.Drawing.Size(112, 20)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Matric Number"
         '
@@ -130,16 +140,6 @@ Partial Class AddSubjectStudentForm
         Me.AddUpdateButton.TabIndex = 4
         Me.AddUpdateButton.Text = "Add"
         Me.AddUpdateButton.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(491, 56)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(168, 147)
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
         '
         'AddSubjectStudentForm
         '

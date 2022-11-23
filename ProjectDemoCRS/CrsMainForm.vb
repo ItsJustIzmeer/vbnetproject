@@ -63,4 +63,74 @@
     Private Sub SubjectListButton_Click(sender As Object, e As EventArgs) Handles SubjectListButton.Click
         SubjectListForm.ShowDialog()
     End Sub
+    Public Sub displaymenu(userLevel As String)
+        If userLevel = "Staff" Then
+            displaystaffmenu()
+        ElseIf userLevel = "Registrar" Then
+            displayregistrarmenu()
+        ElseIf userLevel = "Teacher" Then
+            displayteachermenu()
+        Else
+            MessageBox.Show("error")
+        End If
+    End Sub
+    Private Sub hideallmenu()
+        Me.ApplicationToolStripMenuItem.Enabled = False
+        Me.RegistrarToolStripMenuItem.Enabled = False
+        Me.UserInfoToolStripMenuItem.Enabled = False
+        Me.TeacherInformationToolStripMenuItem.Enabled = False
+        Me.StafInformationToolStripMenuItem.Enabled = False
+        Me.SubjectInfoToolStripMenuItem.Enabled = False
+
+        Me.ClassListButton.Enabled = False
+        Me.RegisterSubjectButton.Enabled = False
+        Me.UserListButton.Enabled = False
+        Me.TeacherListButton.Enabled = False
+        Me.StudentListButton.Enabled = False
+        Me.SubjectListButton.Enabled = False
+        Me.ViewStudentListButton.Enabled = False
+    End Sub
+    Private Sub displaystaffmenu()
+        hideallmenu()
+        Me.ApplicationToolStripMenuItem.Enabled = True
+        Me.RegistrarToolStripMenuItem.Enabled = True
+        Me.UserInfoToolStripMenuItem.Enabled = True
+        Me.TeacherInformationToolStripMenuItem.Enabled = True
+        Me.StafInformationToolStripMenuItem.Enabled = True
+        Me.SubjectInfoToolStripMenuItem.Enabled = True
+        Me.ResetPasswordToolStripMenuItem.Enabled = True
+
+        Me.ClassListButton.Enabled = True
+        Me.RegisterSubjectButton.Enabled = True
+        Me.UserListButton.Enabled = True
+        Me.TeacherListButton.Enabled = True
+        Me.StudentListButton.Enabled = True
+        Me.SubjectListButton.Enabled = True
+        Me.ViewStudentListButton.Enabled = True
+    End Sub
+    Private Sub displayregistrarmenu()
+        hideallmenu()
+        Me.ApplicationToolStripMenuItem.Enabled = True
+        Me.RegistrarToolStripMenuItem.Enabled = True
+        Me.UserInfoToolStripMenuItem.Enabled = True
+        Me.TeacherInformationToolStripMenuItem.Enabled = True
+        Me.SubjectInfoToolStripMenuItem.Enabled = True
+
+        Me.ClassListButton.Enabled = True
+        Me.RegisterSubjectButton.Enabled = True
+        Me.TeacherListButton.Enabled = True
+        Me.StudentListButton.Enabled = True
+        Me.SubjectListButton.Enabled = True
+        Me.ViewStudentListButton.Enabled = True
+
+    End Sub
+    Private Sub displayteachermenu()
+        hideallmenu()
+        Me.ViewStudentListButton.Enabled = True
+        Me.ApplicationToolStripMenuItem.Enabled = True
+    End Sub
+
+    Private Sub ResetPasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetPasswordToolStripMenuItem.Click
+        ResetPasswordForm.ShowDialog()
+    End Sub
 End Class
