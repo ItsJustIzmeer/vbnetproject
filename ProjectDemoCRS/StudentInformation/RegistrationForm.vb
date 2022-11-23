@@ -24,7 +24,7 @@ Public Class RegistrationForm
         openConnection()
         Dim str As String
         str = "SELECT * FROM student WHERE (matricNumber = '" & matricString & "')"
-        MessageBox.Show(str)
+        'MessageBox.Show(str)
         Dim cmd As OleDbCommand = New OleDbCommand(str, conn)
         dr = cmd.ExecuteReader
         While dr.Read()
@@ -46,7 +46,7 @@ Public Class RegistrationForm
         sql &= " where r.matricNumber = stu.matricNumber"
         sql &= " and r.matricNumber = '" & matricString & "'"
         sql &= " and r.subjectCode = s.subjectCode"
-        MessageBox.Show(sql)
+        'MessageBox.Show(sql)
         Debug.WriteLine(sql)
         dataAdapter = New OleDb.OleDbDataAdapter(sql, conn)
         dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
@@ -135,8 +135,8 @@ Public Class RegistrationForm
         If SubjectRegisterDataGridView.RowCount > 1 Then
             Dim totalCredit As Decimal = 0
             For index As Integer = 0 To SubjectRegisterDataGridView.RowCount - 1
-                totalCredit += Convert.ToDecimal(SubjectRegisterDataGridView.Rows(index).Cells(2).Value)
-
+                'totalCredit += Convert.ToDecimal(SubjectRegisterDataGridView.Rows(index).Cells(2).Value)
+                totalCredit = 4 'Decimal.Parse(SubjectRegisterDataGridView.Rows(index).Cells(2).Value)
 
             Next
             TotalCreditLabel.Text = totalCredit

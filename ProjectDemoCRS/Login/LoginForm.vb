@@ -8,21 +8,25 @@ Public Class LoginForm
         user.setUserData(UsernameTextBox.Text, Me.PasswordTextBox.Text)
         Dim valid = loginModel.checkLogin(user)
 
-        Dim dr As OleDbDataReader
-        Dim sql As String
-        con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
-        con.Open()
-        sql = "Select * FROM userTbl"
-
-        Dim cmd1 As New OleDbCommand(sql, con)
-        dr = cmd1.ExecuteReader()
-
-        dr.Read()
-        muserLevel = dr("userlevel").ToString
         If (valid) Then
+
+            Dim dr As OleDbDataReader
+            Dim sql As String
+            con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
+            con.Open()
+            sql = "Select * FROM userTbl WHERE luserName='" & user.userName & "' AND lpassword='" & user.password & "'"
+
+            Dim cmd1 As New OleDbCommand(sql, con)
+            dr = cmd1.ExecuteReader()
+
+            dr.Read()
+            muserLevel = dr("userlevel").ToString
+            con.Close()
+
+
             'CrsMainForm.Show()
             CrsMainForm.displaymenu(muserLevel)
-            Debug.WriteLine(user.userLevel)
+            Debug.WriteLine(muserLevel)
             CrsMainForm.Show()
             Me.Hide()
         Else

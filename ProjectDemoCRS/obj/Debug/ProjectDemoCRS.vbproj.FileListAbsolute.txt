@@ -144,3 +144,4 @@ C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\o
 C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentViewListForm.resources
 C:\Users\User\Documents\SEM 5\VB.Net Programming\finalprojectvb\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources
 C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.ResetPasswordForm.resources
+C:\Users\user\Documents\UTM\YEAR 3\SEM 1\VBNet Programming\Project\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources

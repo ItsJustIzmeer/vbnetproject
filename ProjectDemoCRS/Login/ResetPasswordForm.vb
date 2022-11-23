@@ -19,6 +19,14 @@
             messageString = "The Username : " & theNewLoginRec.userName & " has been updated!"
             MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
+            UsernameTextBox.Clear()
+            PasswordTextBox.Clear()
+            ConfirmPasswordTextBox.Clear()
+            UsernameTextBox.Focus()
         End If
+    End Sub
+
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+        End
     End Sub
 End Class

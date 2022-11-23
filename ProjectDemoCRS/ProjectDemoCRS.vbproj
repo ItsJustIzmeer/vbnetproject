@@ -201,6 +201,12 @@
     <Compile Include="StudentViewList\StudentViewListForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SubjectInformation\SubjectForm.Designer.vb">
+      <DependentUpon>SubjectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectInformation\SubjectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SubjectInformation\SubjectListForm.Designer.vb">
       <DependentUpon>SubjectListForm.vb</DependentUpon>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentViewList\StudentViewListForm.resx">
       <DependentUpon>StudentViewListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectInformation\SubjectForm.resx">
+      <DependentUpon>SubjectForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectInformation\SubjectListForm.resx">
       <DependentUpon>SubjectListForm.vb</DependentUpon>

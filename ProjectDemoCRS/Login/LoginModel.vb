@@ -14,6 +14,7 @@ Public Class LoginModel
         If dr.Read Then
             'userLevel = dr("userlevel").ToString
             'Debug.WriteLine(userLevel)
+            con.Close()
             Return True
         End If
         con.Close()

@@ -26,20 +26,20 @@ Partial Class CrsMainForm
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.ApplicationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TeacherInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StafInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StudentInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegisterStudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewStudentListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TeacherInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TeacherListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubjectInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubjectListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClassListButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -56,7 +56,6 @@ Partial Class CrsMainForm
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -89,9 +88,15 @@ Partial Class CrsMainForm
         Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
+        'ResetPasswordToolStripMenuItem
+        '
+        Me.ResetPasswordToolStripMenuItem.Name = "ResetPasswordToolStripMenuItem"
+        Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
+        '
         'RegistrarToolStripMenuItem
         '
-        Me.RegistrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherInformationToolStripMenuItem, Me.StafInformationToolStripMenuItem, Me.StudentInformationToolStripMenuItem})
+        Me.RegistrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherInformationToolStripMenuItem, Me.RegisterStudentToolStripMenuItem})
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
         Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
@@ -102,17 +107,11 @@ Partial Class CrsMainForm
         Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TeacherInformationToolStripMenuItem.Text = "Class List"
         '
-        'StafInformationToolStripMenuItem
+        'RegisterStudentToolStripMenuItem
         '
-        Me.StafInformationToolStripMenuItem.Name = "StafInformationToolStripMenuItem"
-        Me.StafInformationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.StafInformationToolStripMenuItem.Text = "Assign Teacher"
-        '
-        'StudentInformationToolStripMenuItem
-        '
-        Me.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem"
-        Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.StudentInformationToolStripMenuItem.Text = "Enrol Student"
+        Me.RegisterStudentToolStripMenuItem.Name = "RegisterStudentToolStripMenuItem"
+        Me.RegisterStudentToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegisterStudentToolStripMenuItem.Text = "Register Student"
         '
         'UserInfoToolStripMenuItem
         '
@@ -129,7 +128,7 @@ Partial Class CrsMainForm
         '
         'StudentInfoToolStripMenuItem
         '
-        Me.StudentInfoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentListToolStripMenuItem})
+        Me.StudentInfoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentListToolStripMenuItem, Me.ViewStudentListToolStripMenuItem})
         Me.StudentInfoToolStripMenuItem.Name = "StudentInfoToolStripMenuItem"
         Me.StudentInfoToolStripMenuItem.Size = New System.Drawing.Size(126, 20)
         Me.StudentInfoToolStripMenuItem.Text = "Student Information"
@@ -139,6 +138,12 @@ Partial Class CrsMainForm
         Me.StudentListToolStripMenuItem.Name = "StudentListToolStripMenuItem"
         Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StudentListToolStripMenuItem.Text = "Student List"
+        '
+        'ViewStudentListToolStripMenuItem
+        '
+        Me.ViewStudentListToolStripMenuItem.Name = "ViewStudentListToolStripMenuItem"
+        Me.ViewStudentListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ViewStudentListToolStripMenuItem.Text = "View Student List"
         '
         'TeacherInfoToolStripMenuItem
         '
@@ -163,21 +168,15 @@ Partial Class CrsMainForm
         'SubjectListToolStripMenuItem
         '
         Me.SubjectListToolStripMenuItem.Name = "SubjectListToolStripMenuItem"
-        Me.SubjectListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SubjectListToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.SubjectListToolStripMenuItem.Text = "Subject List"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.AbutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AboutToolStripMenuItem.Text = "Search"
         '
         'AbutToolStripMenuItem
         '
@@ -368,12 +367,6 @@ Partial Class CrsMainForm
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Register"
         '
-        'ResetPasswordToolStripMenuItem
-        '
-        Me.ResetPasswordToolStripMenuItem.Name = "ResetPasswordToolStripMenuItem"
-        Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
-        '
         'CrsMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -409,11 +402,9 @@ Partial Class CrsMainForm
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TeacherInformationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StafInformationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StudentInformationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegisterStudentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SubjectInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AbutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TeacherInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentInfoToolStripMenuItem As ToolStripMenuItem
@@ -438,4 +429,5 @@ Partial Class CrsMainForm
     Friend WithEvents UserInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UserListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetPasswordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewStudentListToolStripMenuItem As ToolStripMenuItem
 End Class

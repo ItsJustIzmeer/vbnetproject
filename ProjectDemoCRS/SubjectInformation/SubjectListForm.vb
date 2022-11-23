@@ -48,8 +48,8 @@
     End Sub
 
     Private Sub addSubjectButton_Click(sender As Object, e As EventArgs) Handles addSubjectButton.Click
-        'SubjectForm.prepareToAddNewSubject()
-        'SubjectForm.ShowDialog()
+        SubjectForm.prepareToAddNewSubject()
+        SubjectForm.ShowDialog()
         displayAllSubject()
     End Sub
     Private Sub SubjectDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles SubjectDataGridView.CellClick
@@ -75,8 +75,8 @@
 
     Private Sub updateSubjectButton_Click(sender As Object, e As EventArgs) Handles updateSubjectButton.Click
         If mSubjectCodeString <> "" Then
-            'SubjectForm.prepareToUpdateSubject(mSubjectCodeString)
-            'SubjectForm.ShowDialog()
+            SubjectForm.prepareToUpdateSubject(mSubjectCodeString)
+            SubjectForm.ShowDialog()
             displayAllSubject()
         End If
     End Sub

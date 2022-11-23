@@ -12,14 +12,14 @@ Public Class User
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "select * FROM userTbl WHERE (userName = '" & username & "')"
+            sql = "select * FROM userTbl WHERE (luserName = '" & username & "')"
 
             Dim cmd As New OleDbCommand(sql, con)
             dr = cmd.ExecuteReader
             If dr.HasRows Then
                 dr.Read()
-                userRec.username = dr("userName").ToString
-                userRec.password = dr("password").ToString
+                userRec.username = dr("luserName").ToString
+                userRec.password = dr("lpassword").ToString
                 userRec.userlevel = dr("userLevel").ToString
                 con.Close()
                 Return userRec
@@ -43,7 +43,7 @@ Public Class User
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into userTbl(userName,[password],userLevel)"
+            sql = "insert into userTbl(luserName,lpassword,userLevel)"
             sql = sql & " values('" & newUserRec.username & "','" & newUserRec.password & "','" & newUserRec.userlevel & "')"
             'insert into student(matricNumber,icNumber,name,dateOfBirth,groupId) values('M1002','','Ahmad','1/9/2021 4:29:14 PM','P1_MERAH')
             MessageBox.Show(sql)
@@ -68,9 +68,9 @@ Public Class User
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sql = "update userTbl set userName ='" & newUserRec.username & "',"
-            sql = sql & " password ='" & newUserRec.password & "',"
-            sql = sql & " where userName ='" & newUserRec.username & "'"
+            sql = "update userTbl set luserName ='" & newUserRec.username & "',"
+            sql = sql & " lpassword ='" & newUserRec.password & "',"
+            sql = sql & " where luserName ='" & newUserRec.username & "'"
             'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
@@ -90,7 +90,7 @@ Public Class User
             Dim sql As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sql = "DELETE FROM userTbl WHERE (userName = '" & username & "')"
+            sql = "DELETE FROM userTbl WHERE (luserName = '" & username & "')"
             MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()

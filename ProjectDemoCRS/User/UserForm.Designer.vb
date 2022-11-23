@@ -30,9 +30,9 @@ Partial Class UserForm
         Me.passwordTextBox = New System.Windows.Forms.TextBox()
         Me.userLevelTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.AddResetButton = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,7 +42,7 @@ Partial Class UserForm
         Me.userNameTextBox.Location = New System.Drawing.Point(295, 59)
         Me.userNameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.userNameTextBox.Name = "userNameTextBox"
-        Me.userNameTextBox.Size = New System.Drawing.Size(348, 37)
+        Me.userNameTextBox.Size = New System.Drawing.Size(348, 31)
         Me.userNameTextBox.TabIndex = 25
         '
         'Label1
@@ -51,7 +51,7 @@ Partial Class UserForm
         Me.Label1.Location = New System.Drawing.Point(36, 63)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 31)
+        Me.Label1.Size = New System.Drawing.Size(110, 25)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "Username"
         '
@@ -61,7 +61,7 @@ Partial Class UserForm
         Me.Label2.Location = New System.Drawing.Point(36, 122)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 31)
+        Me.Label2.Size = New System.Drawing.Size(106, 25)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Password"
         '
@@ -71,7 +71,7 @@ Partial Class UserForm
         Me.Label3.Location = New System.Drawing.Point(36, 183)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(144, 31)
+        Me.Label3.Size = New System.Drawing.Size(115, 25)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "User Level"
         '
@@ -80,7 +80,7 @@ Partial Class UserForm
         Me.passwordTextBox.Location = New System.Drawing.Point(295, 122)
         Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.passwordTextBox.Name = "passwordTextBox"
-        Me.passwordTextBox.Size = New System.Drawing.Size(348, 37)
+        Me.passwordTextBox.Size = New System.Drawing.Size(348, 31)
         Me.passwordTextBox.TabIndex = 26
         '
         'userLevelTextBox
@@ -88,7 +88,7 @@ Partial Class UserForm
         Me.userLevelTextBox.Location = New System.Drawing.Point(295, 180)
         Me.userLevelTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.userLevelTextBox.Name = "userLevelTextBox"
-        Me.userLevelTextBox.Size = New System.Drawing.Size(348, 37)
+        Me.userLevelTextBox.Size = New System.Drawing.Size(348, 31)
         Me.userLevelTextBox.TabIndex = 27
         '
         'GroupBox1
@@ -113,6 +113,16 @@ Partial Class UserForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "User Information"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(725, 59)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(208, 158)
+        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.TabStop = False
+        '
         'CancelButton
         '
         Me.CancelButton.BackColor = System.Drawing.Color.LightSteelBlue
@@ -134,16 +144,6 @@ Partial Class UserForm
         Me.AddResetButton.TabIndex = 22
         Me.AddResetButton.Text = "Button1"
         Me.AddResetButton.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(725, 59)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(208, 158)
-        Me.PictureBox1.TabIndex = 28
-        Me.PictureBox1.TabStop = False
         '
         'UserForm
         '

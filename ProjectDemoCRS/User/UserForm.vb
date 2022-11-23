@@ -16,7 +16,7 @@
             OldUserRec = myUser.getUserRecord(userName)
             With Me
                 .userNameTextBox.Text = OldUserRec.username
-                .userNameTextBox.Enabled = False
+                .userNameTextBox.Enabled = True
                 .passwordTextBox.Text = OldUserRec.password
                 .userLevelTextBox.Text = OldUserRec.userlevel
 
@@ -86,5 +86,9 @@
             MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         End If
+    End Sub
+
+    Private Sub UserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
