@@ -39,7 +39,7 @@ Partial Class UserForm
         '
         'userNameTextBox
         '
-        Me.userNameTextBox.Location = New System.Drawing.Point(295, 59)
+        Me.userNameTextBox.Location = New System.Drawing.Point(312, 55)
         Me.userNameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.userNameTextBox.Name = "userNameTextBox"
         Me.userNameTextBox.Size = New System.Drawing.Size(348, 31)
@@ -77,7 +77,7 @@ Partial Class UserForm
         '
         'passwordTextBox
         '
-        Me.passwordTextBox.Location = New System.Drawing.Point(295, 122)
+        Me.passwordTextBox.Location = New System.Drawing.Point(312, 118)
         Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.passwordTextBox.Name = "passwordTextBox"
         Me.passwordTextBox.Size = New System.Drawing.Size(348, 31)
@@ -85,7 +85,7 @@ Partial Class UserForm
         '
         'userLevelTextBox
         '
-        Me.userLevelTextBox.Location = New System.Drawing.Point(295, 180)
+        Me.userLevelTextBox.Location = New System.Drawing.Point(312, 176)
         Me.userLevelTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.userLevelTextBox.Name = "userLevelTextBox"
         Me.userLevelTextBox.Size = New System.Drawing.Size(348, 31)

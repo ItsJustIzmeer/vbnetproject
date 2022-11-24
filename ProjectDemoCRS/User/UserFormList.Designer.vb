@@ -34,7 +34,7 @@ Partial Class UserFormList
         '
         Me.UserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UserDataGridView.Location = New System.Drawing.Point(11, 79)
-        Me.UserDataGridView.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UserDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.UserDataGridView.MultiSelect = False
         Me.UserDataGridView.Name = "UserDataGridView"
         Me.UserDataGridView.RowHeadersWidth = 51
@@ -74,7 +74,7 @@ Partial Class UserFormList
         Me.ResetPasswordButton.Name = "ResetPasswordButton"
         Me.ResetPasswordButton.Size = New System.Drawing.Size(304, 74)
         Me.ResetPasswordButton.TabIndex = 20
-        Me.ResetPasswordButton.Text = "Reset Password"
+        Me.ResetPasswordButton.Text = "Update User"
         Me.ResetPasswordButton.UseVisualStyleBackColor = False
         '
         'UserFormList
@@ -88,7 +88,7 @@ Partial Class UserFormList
         Me.Controls.Add(Me.AddUserButton)
         Me.Controls.Add(Me.ResetPasswordButton)
         Me.Controls.Add(Me.UserDataGridView)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "UserFormList"
         Me.Text = "UserForm"
         CType(Me.UserDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

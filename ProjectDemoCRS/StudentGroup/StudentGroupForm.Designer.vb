@@ -105,7 +105,7 @@ Partial Class StudentGroupForm
         Me.secondaryRadioButton.Location = New System.Drawing.Point(227, 37)
         Me.secondaryRadioButton.Margin = New System.Windows.Forms.Padding(4)
         Me.secondaryRadioButton.Name = "secondaryRadioButton"
-        Me.secondaryRadioButton.Size = New System.Drawing.Size(165, 35)
+        Me.secondaryRadioButton.Size = New System.Drawing.Size(133, 29)
         Me.secondaryRadioButton.TabIndex = 13
         Me.secondaryRadioButton.TabStop = True
         Me.secondaryRadioButton.Text = "Secondary"
@@ -118,7 +118,7 @@ Partial Class StudentGroupForm
         Me.primaryRadioButton.Location = New System.Drawing.Point(48, 37)
         Me.primaryRadioButton.Margin = New System.Windows.Forms.Padding(4)
         Me.primaryRadioButton.Name = "primaryRadioButton"
-        Me.primaryRadioButton.Size = New System.Drawing.Size(128, 35)
+        Me.primaryRadioButton.Size = New System.Drawing.Size(103, 29)
         Me.primaryRadioButton.TabIndex = 12
         Me.primaryRadioButton.TabStop = True
         Me.primaryRadioButton.Text = "Primary"
@@ -129,7 +129,7 @@ Partial Class StudentGroupForm
         Me.noOfStudentTextBox.Location = New System.Drawing.Point(265, 334)
         Me.noOfStudentTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.noOfStudentTextBox.Name = "noOfStudentTextBox"
-        Me.noOfStudentTextBox.Size = New System.Drawing.Size(344, 37)
+        Me.noOfStudentTextBox.Size = New System.Drawing.Size(344, 31)
         Me.noOfStudentTextBox.TabIndex = 9
         Me.noOfStudentTextBox.Text = "10"
         '
@@ -139,7 +139,7 @@ Partial Class StudentGroupForm
         Me.Label4.Location = New System.Drawing.Point(12, 334)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(230, 31)
+        Me.Label4.Size = New System.Drawing.Size(184, 25)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Maximum Student"
         '
@@ -159,7 +159,7 @@ Partial Class StudentGroupForm
         Me.groupNameTextBox.Location = New System.Drawing.Point(271, 133)
         Me.groupNameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.groupNameTextBox.Name = "groupNameTextBox"
-        Me.groupNameTextBox.Size = New System.Drawing.Size(348, 37)
+        Me.groupNameTextBox.Size = New System.Drawing.Size(348, 31)
         Me.groupNameTextBox.TabIndex = 4
         Me.groupNameTextBox.Text = "3 BIRU"
         '
@@ -168,7 +168,7 @@ Partial Class StudentGroupForm
         Me.groupIdTextBox.Location = New System.Drawing.Point(275, 70)
         Me.groupIdTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.groupIdTextBox.Name = "groupIdTextBox"
-        Me.groupIdTextBox.Size = New System.Drawing.Size(344, 37)
+        Me.groupIdTextBox.Size = New System.Drawing.Size(344, 31)
         Me.groupIdTextBox.TabIndex = 3
         Me.groupIdTextBox.Text = "P3_BIRU"
         '
@@ -178,7 +178,7 @@ Partial Class StudentGroupForm
         Me.Label3.Location = New System.Drawing.Point(12, 194)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(79, 31)
+        Me.Label3.Size = New System.Drawing.Size(64, 25)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Level"
         '
@@ -188,7 +188,7 @@ Partial Class StudentGroupForm
         Me.Label2.Location = New System.Drawing.Point(12, 133)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 31)
+        Me.Label2.Size = New System.Drawing.Size(133, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Group Name"
         '
@@ -198,7 +198,7 @@ Partial Class StudentGroupForm
         Me.Label1.Location = New System.Drawing.Point(12, 74)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 31)
+        Me.Label1.Size = New System.Drawing.Size(94, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Group Id"
         '

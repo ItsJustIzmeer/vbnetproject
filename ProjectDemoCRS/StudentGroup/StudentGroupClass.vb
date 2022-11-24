@@ -12,7 +12,7 @@ Public Class StudentGroupClass
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
             If con.State = ConnectionState.Open Then
-                MsgBox("MS Database Connected!")
+                'MsgBox("MS Database Connected!")
             Else
                 MsgBox("error connecting to database")
                 Exit Function
@@ -40,7 +40,7 @@ Public Class StudentGroupClass
             con.Open()
             sql = "select * FROM studentGroupTbl WHERE (groupId = '" & studentGroupId & "')"
 
-            MessageBox.Show(sql)
+            'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
@@ -107,7 +107,7 @@ Public Class StudentGroupClass
             sql = sql & " groupLevel ='" & newStudentGroupRec.groupLevel & "',"
             sql = sql & " maximumStudent ='" & newStudentGroupRec.capacity & "'"
             sql = sql & " where groupId ='" & oldStudentGroupRec.studentGroupId & "'"
-            MessageBox.Show(sql)
+            'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
             con.Close()
@@ -127,7 +127,7 @@ Public Class StudentGroupClass
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
             sql = "DELETE FROM studentGroupTbl WHERE (groupId = '" & groupId & "')"
-            MessageBox.Show(sql)
+            'MessageBox.Show(sql)
             Dim cmd As New OleDbCommand(sql, con)
             cmd.ExecuteNonQuery()
             con.Close()
